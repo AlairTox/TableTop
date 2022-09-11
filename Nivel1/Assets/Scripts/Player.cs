@@ -7,11 +7,12 @@ public class Player : MonoBehaviour
 
     [SerializeField] float moveSpeed;
     [SerializeField] float minX, minY, minZ, maxX, maxY, maxZ, padding;
+    Rigidbody rb;
 
     // Start is called before the first frame update
     void Start()
     {
-        
+        rb = gameObject.GetComponent<Rigidbody>();
     }
 
     // Update is called once per frame
@@ -22,16 +23,13 @@ public class Player : MonoBehaviour
 
     private void Move()
     {
-        float deltaX = Input.GetAxis("Horizontal") * moveSpeed * Time.deltaTime;
-        //float deltaY = Input.GetAxis("Vertical") * moveSpeed * Time.deltaTime;
-        float deltaZ = Input.GetAxis("Vertical") * moveSpeed * Time.deltaTime;
-        //float deltaZ = Input.GetAxis("AxisZ") * moveSpeed * Time.deltaTime;
+        float deltaX = Input.GetAxis("Horizontal") * moveSpeed * Time.deltaTime * 5;
+        float deltaZ = Input.GetAxis("Vertical") * moveSpeed * Time.deltaTime * 5;
         
         float newPosX = Mathf.Clamp(transform.position.x + deltaX, minX + padding, maxX - padding);
-        //float newPosY = Mathf.Clamp(transform.position.y + deltaY, minY + padding, maxY - padding);
         float newPosZ = Mathf.Clamp(transform.position.z + deltaZ, minZ + padding, maxZ - padding);
         
-        transform.position = new Vector3(newPosX, transform.position.y, newPosZ);        
+        rb.MovePosition(new Vector3(newPosX, transform.position.y, newPosZ));        
     }
 }
 
