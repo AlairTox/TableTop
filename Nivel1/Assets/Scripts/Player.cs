@@ -1,13 +1,22 @@
+using System.Numerics;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
 public class Player : MonoBehaviour
 {
-
+    [Header("Move")]
     [SerializeField] float moveSpeed;
     [SerializeField] float minX, minY, minZ, maxX, maxY, maxZ, padding;
+    
+    [Header("Fire")]
+    [SerializeField] float fireRate;
+    [SerializeField] PlayerProjectile projectilePrefab;
+    [SerializeField] FireSpark FireSpark;
+    [SerializeField] public Transform projectiles;
+
     Rigidbody rb;
+    Coroutine fireCoroutine;
 
     // Start is called before the first frame update
     void Start()
@@ -19,6 +28,7 @@ public class Player : MonoBehaviour
     void Update()
     {
         Move();
+        Fire();
     }
 
     private void Move()
@@ -29,7 +39,26 @@ public class Player : MonoBehaviour
         float newPosX = Mathf.Clamp(transform.position.x + deltaX, minX + padding, maxX - padding);
         float newPosZ = Mathf.Clamp(transform.position.z + deltaZ, minZ + padding, maxZ - padding);
         
-        rb.MovePosition(new Vector3(newPosX, transform.position.y, newPosZ));        
+        rb.MovePosition(new UnityEngine.Vector3(newPosX, transform.position.y, newPosZ));        
+    }
+    void Fire(){
+
+        if(Input.GetButtonDown("Fire1"))
+            fireCoroutine = StartCoroutine(FireContinuosly());
+        if(Input.GetButtonUp("Fire1"))
+            StopCoroutine(fireCoroutine);
+    }
+
+    IEnumerator FireContinuosly(){
+        yield return new WaitForSeconds(fireRate);
+        FireSpark.ShowSpark();
+        ShootProjectile(FireSpark.transform.position);
+        fireCoroutine = StartCoroutine(FireContinuosly());
+    }
+
+    private void ShootProjectile(UnityEngine.Vector3 projectilePosition){
+        var newProjectile = Instantiate(projectilePrefab, projectilePosition, UnityEngine.Quaternion.identity);
+        newProjectile.transform.SetParent(projectiles);
     }
 }
 
