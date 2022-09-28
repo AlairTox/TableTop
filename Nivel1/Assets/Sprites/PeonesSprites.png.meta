@@ -1,5 +1,5 @@
 fileFormatVersion: 2
-guid: 700615f55519e1749ab7731054f903f6
+guid: c01866a04788d4446a5bed38ffb3c825
 TextureImporter:
   internalIDToNameTable: []
   externalObjects: {}
@@ -42,7 +42,7 @@ TextureImporter:
   nPOTScale: 0
   lightmap: 0
   compressionQuality: 50
-  spriteMode: 1
+  spriteMode: 2
   spriteExtrude: 1
   spriteMeshType: 1
   alignment: 0
@@ -126,18 +126,150 @@ TextureImporter:
     forceMaximumCompressionQuality_BC6H_BC7: 0
   spriteSheet:
     serializedVersion: 2
-    sprites: []
+    sprites:
+    - serializedVersion: 2
+      name: PeonesSprites_0
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 825.5
+        width: 436
+        height: 825.5
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c0d39bc37ab38c640854ba1345cb18dc
+      internalID: 259136807
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PeonesSprites_1
+      rect:
+        serializedVersion: 2
+        x: 436
+        y: 825.5
+        width: 436
+        height: 825.5
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 32fae47f1a9178c4f8b0e1fbb2014925
+      internalID: -722352634
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PeonesSprites_2
+      rect:
+        serializedVersion: 2
+        x: 872
+        y: 825.5
+        width: 436
+        height: 825.5
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 3646d1acbf15ab247b44a0816c24a7d4
+      internalID: 249098233
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PeonesSprites_3
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 0.5
+        width: 436
+        height: 825.5
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 9b60deb58e8d5a44c971b07e797b29ee
+      internalID: 2065517606
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PeonesSprites_4
+      rect:
+        serializedVersion: 2
+        x: 436
+        y: 0.5
+        width: 436
+        height: 825.5
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 1ea9de4323af0b445a84242163b618e5
+      internalID: -383980344
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PeonesSprites_5
+      rect:
+        serializedVersion: 2
+        x: 872
+        y: 0.5
+        width: 436
+        height: 825.5
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b079259c95ef2b5408643d57151340e2
+      internalID: 617884695
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
     outline: []
     physicsShape: []
     bones: []
-    spriteID: 5e97eb03825dee720800000000000000
+    spriteID: 4b0822a3ccb74fa47ac5de4a04d355a6
     internalID: 0
     vertices: []
     indices: 
     edges: []
     weights: []
     secondaryTextures: []
-    nameFileIdTable: {}
+    nameFileIdTable:
+      PeonesSprites_3: 2065517606
+      PeonesSprites_1: -722352634
+      PeonesSprites_4: -383980344
+      PeonesSprites_2: 249098233
+      PeonesSprites_0: 259136807
+      PeonesSprites_5: 617884695
   spritePackingTag: 
   pSDRemoveMatte: 0
   pSDShowRemoveMatteOption: 0

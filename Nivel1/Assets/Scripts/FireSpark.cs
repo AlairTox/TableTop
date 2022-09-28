@@ -23,7 +23,7 @@ public class FireSpark : MonoBehaviour
 
     void HideSpark(){   
         if(spriteRenderer.color.a > 0)
-            spriteRenderer.color = new UnityEngine.Color(1f, 1f, 1f, spriteRenderer.color.a -(Time.deltaTime * 5f));
+            spriteRenderer.color = new UnityEngine.Color(1f, 1f, 1f, spriteRenderer.color.a - (Time.deltaTime * 5f));
     }
 
     public void ShowSpark(){
