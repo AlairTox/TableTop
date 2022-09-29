@@ -1,5 +1,5 @@
 fileFormatVersion: 2
-guid: c01866a04788d4446a5bed38ffb3c825
+guid: 6a17b5c0eac72134ca3a7099e092e843
 TextureImporter:
   internalIDToNameTable: []
   externalObjects: {}
@@ -128,127 +128,127 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: PeonesSprites_0
+      name: spritesheet torres_0
       rect:
         serializedVersion: 2
         x: 0
-        y: 825.5
-        width: 436
-        height: 825.5
-      alignment: 0
-      pivot: {x: 0, y: 0}
+        y: 912
+        width: 434.66666
+        height: 912
+      alignment: 1
+      pivot: {x: 0, y: 1}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: c0d39bc37ab38c640854ba1345cb18dc
-      internalID: 259136807
+      spriteID: 3c2e760c655c87445b9c4524c05fd035
+      internalID: 770907556
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: PeonesSprites_1
+      name: spritesheet torres_1
       rect:
         serializedVersion: 2
-        x: 436
-        y: 825.5
-        width: 436
-        height: 825.5
-      alignment: 0
-      pivot: {x: 0, y: 0}
+        x: 434
+        y: 912
+        width: 434.66666
+        height: 912
+      alignment: 1
+      pivot: {x: 0, y: 1}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 32fae47f1a9178c4f8b0e1fbb2014925
-      internalID: -722352634
+      spriteID: 38fa24839949d93488aaf50a69537952
+      internalID: 187950272
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: PeonesSprites_2
+      name: spritesheet torres_2
       rect:
         serializedVersion: 2
-        x: 872
-        y: 825.5
-        width: 436
-        height: 825.5
-      alignment: 0
-      pivot: {x: 0, y: 0}
+        x: 868
+        y: 912
+        width: 434.66666
+        height: 912
+      alignment: 1
+      pivot: {x: 0, y: 1}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 3646d1acbf15ab247b44a0816c24a7d4
-      internalID: 249098233
+      spriteID: dbd5b7fbcaf2e134386db4fd60a3eeb4
+      internalID: 1320832652
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: PeonesSprites_3
+      name: spritesheet torres_3
       rect:
         serializedVersion: 2
         x: 0
-        y: 0.5
-        width: 436
-        height: 825.5
-      alignment: 0
-      pivot: {x: 0, y: 0}
+        y: 0
+        width: 434.66666
+        height: 912
+      alignment: 1
+      pivot: {x: 0, y: 1}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 9b60deb58e8d5a44c971b07e797b29ee
-      internalID: 2065517606
+      spriteID: 10e6a2a018be56f41933f7f9b6f3f3de
+      internalID: -864804286
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: PeonesSprites_4
+      name: spritesheet torres_4
       rect:
         serializedVersion: 2
-        x: 436
-        y: 0.5
-        width: 436
-        height: 825.5
-      alignment: 0
-      pivot: {x: 0, y: 0}
+        x: 434
+        y: 0
+        width: 434.66666
+        height: 912
+      alignment: 1
+      pivot: {x: 0, y: 1}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 1ea9de4323af0b445a84242163b618e5
-      internalID: -383980344
+      spriteID: 26fa5e2fbd9a6bd44ad2dcaf89e3fd8f
+      internalID: 1837322733
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: PeonesSprites_5
+      name: spritesheet torres_5
       rect:
         serializedVersion: 2
-        x: 872
-        y: 0.5
-        width: 436
-        height: 825.5
-      alignment: 0
-      pivot: {x: 0, y: 0}
+        x: 868
+        y: 0
+        width: 434.66666
+        height: 912
+      alignment: 1
+      pivot: {x: 0, y: 1}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: b079259c95ef2b5408643d57151340e2
-      internalID: 617884695
+      spriteID: 32e191898a2e123409f8ef20c57ce154
+      internalID: 228449611
       vertices: []
       indices: 
       edges: []
@@ -256,7 +256,7 @@ TextureImporter:
     outline: []
     physicsShape: []
     bones: []
-    spriteID: 4b0822a3ccb74fa47ac5de4a04d355a6
+    spriteID: 62300ad9c22d9bb4aa762dd01ee62c74
     internalID: 0
     vertices: []
     indices: 
@@ -264,12 +264,12 @@ TextureImporter:
     weights: []
     secondaryTextures: []
     nameFileIdTable:
-      PeonesSprites_3: 2065517606
-      PeonesSprites_1: -722352634
-      PeonesSprites_4: -383980344
-      PeonesSprites_2: 249098233
-      PeonesSprites_0: 259136807
-      PeonesSprites_5: 617884695
+      spritesheet torres_0: 770907556
+      spritesheet torres_4: 1837322733
+      spritesheet torres_3: -864804286
+      spritesheet torres_5: 228449611
+      spritesheet torres_2: 1320832652
+      spritesheet torres_1: 187950272
   spritePackingTag: 
   pSDRemoveMatte: 0
   pSDShowRemoveMatteOption: 0

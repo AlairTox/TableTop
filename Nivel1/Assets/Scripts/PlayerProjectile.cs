@@ -35,19 +35,26 @@ public class PlayerProjectile : MonoBehaviour
     void KeyLogger(){
        deltaZ = Input.GetAxis("Vertical");
        deltaX = Input.GetAxis("Horizontal");
-
     }
 
     void ProjectileMove(){
-        if(deltaZ < 0)
-            rigidBody.AddForce(0, 0, 5, ForceMode.Impulse);
-        if(deltaZ > 0)
-            rigidBody.AddForce(0, 0, -5, ForceMode.Impulse);
-        if(deltaX > 0)
-            rigidBody.AddForce(5, 0, 0, ForceMode.Impulse);
-        if(deltaX < 0)
-            rigidBody.AddForce(-5, 0, 0, ForceMode.Impulse);
+        if(deltaZ < 0){
+            rigidBody.AddForce(0, 0, 20, ForceMode.Impulse);
+            return;
+        }
+        if(deltaZ > 0){
+            rigidBody.AddForce(0, 0, -20, ForceMode.Impulse);
+            return;
+        }
+        if(deltaX > 0){
+            rigidBody.AddForce(20, 0, 0, ForceMode.Impulse);
+            return;
+        }
+        if(deltaX < 0){
+            rigidBody.AddForce(-20, 0, 0, ForceMode.Impulse);
+            return;
+        }
         if(deltaX == 0 && deltaZ == 0)
-            rigidBody.AddForce(0, 0, -5, ForceMode.Impulse);
+            rigidBody.AddForce(0, 0, -20, ForceMode.Impulse);
     }
 }

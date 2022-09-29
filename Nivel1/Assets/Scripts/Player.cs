@@ -9,7 +9,7 @@ public class Player : MonoBehaviour
     [Header("Move")]
     [SerializeField] float moveSpeed;
     [SerializeField] float minX, minY, minZ, maxX, maxY, maxZ, padding;
-    [SerializeField] Sprite[] Sprite;
+    [SerializeField] Sprite[] newSprite;
     
     [Header("Fire")]
     [SerializeField] float fireRate;
@@ -19,13 +19,13 @@ public class Player : MonoBehaviour
 
     Rigidbody rigidBody;
     Coroutine fireCoroutine;
-    SpriteRenderer spriteActual;
+    SpriteRenderer sprite;
 
     // Start is called before the first frame update
     void Start()
     {
         rigidBody =  gameObject.GetComponent<Rigidbody>();
-        spriteActual = gameObject.GetComponent<SpriteRenderer>();
+        sprite = gameObject.GetComponent<SpriteRenderer>();
     }
 
     // Update is called once per frame
@@ -33,6 +33,7 @@ public class Player : MonoBehaviour
     {
         Move();
         Fire();
+        changeSprite();
     }
 
     private void Move()
@@ -62,6 +63,28 @@ public class Player : MonoBehaviour
     private void ShootProjectile(UnityEngine.Vector3 projectilePosition){
         var newProjectile = Instantiate(projectilePrefab, projectilePosition, UnityEngine.Quaternion.identity);
         newProjectile.transform.SetParent(projectiles);
+    }
+
+    void changeSprite(){
+        float deltaZ = Input.GetAxis("Vertical");
+        float deltaX = Input.GetAxis("Horizontal");
+
+        if(deltaZ < 0){
+            sprite.sprite = newSprite[3];
+            return;
+        }
+        if(deltaZ > 0){
+            sprite.sprite = newSprite[1];
+            return;
+        }
+        if(deltaX > 0){
+            sprite.sprite = newSprite[0];
+            return;
+        }
+        if(deltaX < 0){
+            sprite.sprite = newSprite[2];
+            return;
+        }
     }
 }
 
