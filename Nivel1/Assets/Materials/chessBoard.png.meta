@@ -1,5 +1,5 @@
 fileFormatVersion: 2
-guid: 6a17b5c0eac72134ca3a7099e092e843
+guid: 92f90380c74d0b746ab0994c1e860e23
 TextureImporter:
   internalIDToNameTable: []
   externalObjects: {}
@@ -42,7 +42,7 @@ TextureImporter:
   nPOTScale: 0
   lightmap: 0
   compressionQuality: 50
-  spriteMode: 2
+  spriteMode: 1
   spriteExtrude: 1
   spriteMeshType: 1
   alignment: 0
@@ -126,150 +126,18 @@ TextureImporter:
     forceMaximumCompressionQuality_BC6H_BC7: 0
   spriteSheet:
     serializedVersion: 2
-    sprites:
-    - serializedVersion: 2
-      name: spritesheet torres_0
-      rect:
-        serializedVersion: 2
-        x: 0
-        y: 912
-        width: 434.66666
-        height: 912
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 3c2e760c655c87445b9c4524c05fd035
-      internalID: 770907556
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: spritesheet torres_1
-      rect:
-        serializedVersion: 2
-        x: 434
-        y: 912
-        width: 434.66666
-        height: 912
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 38fa24839949d93488aaf50a69537952
-      internalID: 187950272
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: spritesheet torres_2
-      rect:
-        serializedVersion: 2
-        x: 868
-        y: 912
-        width: 434.66666
-        height: 912
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: dbd5b7fbcaf2e134386db4fd60a3eeb4
-      internalID: 1320832652
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: spritesheet torres_3
-      rect:
-        serializedVersion: 2
-        x: 0
-        y: 0
-        width: 434.66666
-        height: 912
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 10e6a2a018be56f41933f7f9b6f3f3de
-      internalID: -864804286
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: spritesheet torres_4
-      rect:
-        serializedVersion: 2
-        x: 434
-        y: 0
-        width: 434.66666
-        height: 912
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 26fa5e2fbd9a6bd44ad2dcaf89e3fd8f
-      internalID: 1837322733
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: spritesheet torres_5
-      rect:
-        serializedVersion: 2
-        x: 868
-        y: 0
-        width: 434.66666
-        height: 912
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 32e191898a2e123409f8ef20c57ce154
-      internalID: 228449611
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
+    sprites: []
     outline: []
     physicsShape: []
     bones: []
-    spriteID: 62300ad9c22d9bb4aa762dd01ee62c74
+    spriteID: 5e97eb03825dee720800000000000000
     internalID: 0
     vertices: []
     indices: 
     edges: []
     weights: []
     secondaryTextures: []
-    nameFileIdTable:
-      spritesheet torres_0: 770907556
-      spritesheet torres_4: 1837322733
-      spritesheet torres_3: -864804286
-      spritesheet torres_5: 228449611
-      spritesheet torres_2: 1320832652
-      spritesheet torres_1: 187950272
+    nameFileIdTable: {}
   spritePackingTag: 
   pSDRemoveMatte: 0
   pSDShowRemoveMatteOption: 0

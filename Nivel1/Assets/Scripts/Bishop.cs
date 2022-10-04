@@ -1,3 +1,6 @@
+using System.Xml.Schema;
+using System.Net.Mail;
+using System.Xml.Serialization;
 using System.Runtime.CompilerServices;
 using System.ComponentModel;
 using System.Numerics;
@@ -5,7 +8,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class Player : MonoBehaviour
+public class Bishop : MonoBehaviour
 {
     [Header("Move")]
     [SerializeField] float moveSpeed;
@@ -14,7 +17,7 @@ public class Player : MonoBehaviour
     
     [Header("Fire")]
     [SerializeField] float fireRate;
-    [SerializeField] GameObject projectilePrefab;
+    [SerializeField] BishopProjectile projectilePrefab;
     [SerializeField] FireSpark FireSpark;
     [SerializeField] public Transform projectiles;
 
@@ -66,14 +69,15 @@ public class Player : MonoBehaviour
         newProjectile.transform.SetParent(projectiles);
     }
 
+
     private void changeSprite(){
         UnityEngine.Vector3 positionOnScreen = Camera.main.WorldToViewportPoint(transform.position);
         UnityEngine.Vector3 mouseOnScreen = Camera.main.ScreenToViewportPoint(Input.mousePosition);
         UnityEngine.Vector3 direction = positionOnScreen - mouseOnScreen;
         float ang = Mathf.Atan2(direction.y, direction.x) * Mathf.Rad2Deg;
-
+        UnityEngine.Debug.Log(ang);
         if(ang < -45 && ang >= -135){
-           sprite.sprite = newSprite[2];
+           sprite.sprite = newSprite[3];
             return;
         }
         if(ang > 45 && ang <= 135){
@@ -82,12 +86,10 @@ public class Player : MonoBehaviour
         }        
         if(ang > 135 || ang < -135){
             sprite.sprite = newSprite[0];
-            GetComponent<SpriteRenderer>().flipX = false;
             return;
         }
         if(ang > -45 && ang <= 45){
-            sprite.sprite = newSprite[0];
-            GetComponent<SpriteRenderer>().flipX = true;
+            sprite.sprite = newSprite[2];
             return;
         }
     }
