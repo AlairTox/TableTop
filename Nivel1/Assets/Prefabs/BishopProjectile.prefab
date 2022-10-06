@@ -13,7 +13,7 @@ GameObject:
   - component: {fileID: 5240387532247987699}
   - component: {fileID: -842202306517953128}
   - component: {fileID: 7308688049262599833}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: BishopProjectile
   m_TagString: Untagged
   m_Icon: {fileID: 0}

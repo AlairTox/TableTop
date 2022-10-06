@@ -132,18 +132,18 @@ TextureImporter:
       rect:
         serializedVersion: 2
         x: 0
-        y: 901
-        width: 452
-        height: 901
+        y: 924
+        width: 454
+        height: 924
       alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: e01f0ba264fd2ed4686540f675c70559
-      internalID: -279997079
+      spriteID: aa0a2d8032b367b4dab428907c8db8d8
+      internalID: 196293607
       vertices: []
       indices: 
       edges: []
@@ -152,19 +152,19 @@ TextureImporter:
       name: spritesheet caballo_1
       rect:
         serializedVersion: 2
-        x: 448
-        y: 901
-        width: 448
-        height: 901
+        x: 455
+        y: 924
+        width: 409
+        height: 924
       alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 962193444f0b5ad419ecab07e94507c5
-      internalID: 1450554386
+      spriteID: 8c553f84e987ec54d93dcfb2369d96a4
+      internalID: 601660324
       vertices: []
       indices: 
       edges: []
@@ -173,19 +173,19 @@ TextureImporter:
       name: spritesheet caballo_2
       rect:
         serializedVersion: 2
-        x: 896
-        y: 901
-        width: 448
-        height: 901
+        x: 864
+        y: 922
+        width: 421
+        height: 924
       alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 6a9aefb1080eb054894951756b142061
-      internalID: 1546050176
+      spriteID: 11b74b6dc0219e142b8b7ac0f302496f
+      internalID: -1785230116
       vertices: []
       indices: 
       edges: []
@@ -194,19 +194,19 @@ TextureImporter:
       name: spritesheet caballo_3
       rect:
         serializedVersion: 2
-        x: 0
-        y: 0
-        width: 455
-        height: 901
+        x: 1286
+        y: 924
+        width: 444
+        height: 924
       alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 1c0fe7e99138e4f4aa88b429c2dae633
-      internalID: 1883838010
+      spriteID: ca850c068250a5d4a9ffb2b8b5e38e1e
+      internalID: 1120559069
       vertices: []
       indices: 
       edges: []
@@ -215,19 +215,19 @@ TextureImporter:
       name: spritesheet caballo_4
       rect:
         serializedVersion: 2
-        x: 448
-        y: 0
-        width: 448
-        height: 901
+        x: 1
+        y: 1
+        width: 453
+        height: 924
       alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 52671888a6d9f07419dc9cf34e5c653c
-      internalID: 377593570
+      spriteID: c3b8615e76eef9049bd03a5d8b39c893
+      internalID: 61742310
       vertices: []
       indices: 
       edges: []
@@ -236,19 +236,61 @@ TextureImporter:
       name: spritesheet caballo_5
       rect:
         serializedVersion: 2
-        x: 896
+        x: 458
         y: 0
-        width: 448
-        height: 901
+        width: 408
+        height: 924
       alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 3a8ddc63502c3e640b0358254c3fc4b3
-      internalID: -2095299162
+      spriteID: 33021453a76e4df4a8d38b7727863bb9
+      internalID: 1012333141
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: spritesheet caballo_6
+      rect:
+        serializedVersion: 2
+        x: 864
+        y: 0
+        width: 421
+        height: 924
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 65a28f127b032364596d31daaa1968f8
+      internalID: 555356778
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: spritesheet caballo_7
+      rect:
+        serializedVersion: 2
+        x: 1286
+        y: 0
+        width: 443
+        height: 924
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ccd48f3ed44cde742b0eb1e3e4f0d019
+      internalID: -1123540243
       vertices: []
       indices: 
       edges: []
@@ -256,7 +298,7 @@ TextureImporter:
     outline: []
     physicsShape: []
     bones: []
-    spriteID: a3c610d3f7b8b37449e1bb236e5efa42
+    spriteID: 16a251235357dc743887eaee974a183b
     internalID: 0
     vertices: []
     indices: 
@@ -264,12 +306,14 @@ TextureImporter:
     weights: []
     secondaryTextures: []
     nameFileIdTable:
-      spritesheet caballo_1: 1450554386
-      spritesheet caballo_0: -279997079
-      spritesheet caballo_2: 1546050176
-      spritesheet caballo_3: 1883838010
-      spritesheet caballo_5: -2095299162
-      spritesheet caballo_4: 377593570
+      spritesheet caballo_7: -1123540243
+      spritesheet caballo_1: 601660324
+      spritesheet caballo_0: 196293607
+      spritesheet caballo_6: 555356778
+      spritesheet caballo_2: -1785230116
+      spritesheet caballo_3: 1120559069
+      spritesheet caballo_5: 1012333141
+      spritesheet caballo_4: 61742310
   spritePackingTag: 
   pSDRemoveMatte: 0
   pSDShowRemoveMatteOption: 0

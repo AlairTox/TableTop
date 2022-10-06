@@ -15,7 +15,7 @@ GameObject:
   - component: {fileID: -8829346064846849624}
   m_Layer: 6
   m_Name: Queen
-  m_TagString: Untagged
+  m_TagString: Player
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -77,12 +77,12 @@ SpriteRenderer:
   m_SortingLayerID: -1748274187
   m_SortingLayer: 1
   m_SortingOrder: 0
-  m_Sprite: {fileID: 28195920, guid: a5da315405a7a784fbc7ac3b08fc0fb3, type: 3}
+  m_Sprite: {fileID: 978368404, guid: a5da315405a7a784fbc7ac3b08fc0fb3, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
   m_DrawMode: 0
-  m_Size: {x: 4.25, y: 10}
+  m_Size: {x: 4.2875, y: 10}
   m_AdaptiveModeThreshold: 0.5
   m_SpriteTileMode: 0
   m_WasSpriteAssigned: 1
@@ -138,9 +138,10 @@ MonoBehaviour:
   maxZ: 100
   padding: 2
   newSprite:
-  - {fileID: 155018710, guid: a5da315405a7a784fbc7ac3b08fc0fb3, type: 3}
-  - {fileID: 28195920, guid: a5da315405a7a784fbc7ac3b08fc0fb3, type: 3}
-  - {fileID: 894057317, guid: a5da315405a7a784fbc7ac3b08fc0fb3, type: 3}
+  - {fileID: -2079095462, guid: a5da315405a7a784fbc7ac3b08fc0fb3, type: 3}
+  - {fileID: 978368404, guid: a5da315405a7a784fbc7ac3b08fc0fb3, type: 3}
+  - {fileID: -737994231, guid: a5da315405a7a784fbc7ac3b08fc0fb3, type: 3}
+  - {fileID: 367723638, guid: a5da315405a7a784fbc7ac3b08fc0fb3, type: 3}
   fireRate: 0.25
   projectilePrefab: {fileID: 1132424580817164973, guid: 770700d7ba660b649abc5a4fab9118ed,
     type: 3}

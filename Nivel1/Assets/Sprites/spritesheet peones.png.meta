@@ -132,9 +132,9 @@ TextureImporter:
       rect:
         serializedVersion: 2
         x: 0
-        y: 825.5
-        width: 436
-        height: 825.5
+        y: 822
+        width: 428.75
+        height: 822
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -142,8 +142,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 5646336498ed88c43bca7eacb5ab8015
-      internalID: 1232241572
+      spriteID: 735e3a9c8460bc34688b9fd860c8dc33
+      internalID: -1437318357
       vertices: []
       indices: 
       edges: []
@@ -152,10 +152,10 @@ TextureImporter:
       name: spritesheet peones_1
       rect:
         serializedVersion: 2
-        x: 436
-        y: 825.5
-        width: 436
-        height: 825.5
+        x: 428
+        y: 822
+        width: 428.75
+        height: 822
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -163,8 +163,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 489b859aaa2fd354989f126bfb1f29c1
-      internalID: -1114643716
+      spriteID: 081f9d98de911ee47be31a5e1dea0e55
+      internalID: -366179977
       vertices: []
       indices: 
       edges: []
@@ -173,10 +173,10 @@ TextureImporter:
       name: spritesheet peones_2
       rect:
         serializedVersion: 2
-        x: 872
-        y: 825.5
-        width: 436
-        height: 825.5
+        x: 856
+        y: 822
+        width: 428.75
+        height: 822
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -184,8 +184,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: f2764f77d9873ad48ad83d1e8c54facc
-      internalID: -180172866
+      spriteID: c7d48c05d25ddb447aed99e837333903
+      internalID: 91944497
       vertices: []
       indices: 
       edges: []
@@ -194,10 +194,10 @@ TextureImporter:
       name: spritesheet peones_3
       rect:
         serializedVersion: 2
-        x: 0
-        y: 0.5
-        width: 436
-        height: 825.5
+        x: 1284
+        y: 822
+        width: 428.75
+        height: 822
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -205,8 +205,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 6f036f877ef73e34d95dd0e57a744c1d
-      internalID: -1560891553
+      spriteID: bdbdc1fa316465f45830039e0b1fbdcd
+      internalID: -753917195
       vertices: []
       indices: 
       edges: []
@@ -215,10 +215,10 @@ TextureImporter:
       name: spritesheet peones_4
       rect:
         serializedVersion: 2
-        x: 436
-        y: 0.5
-        width: 436
-        height: 825.5
+        x: 0
+        y: 0
+        width: 428.75
+        height: 822
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -226,8 +226,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: c1b81c40a9ac5cb4391f6ebf6e1889d1
-      internalID: -737142161
+      spriteID: 71b87e5067ef513489203eb12e0fd057
+      internalID: -1966451761
       vertices: []
       indices: 
       edges: []
@@ -236,10 +236,10 @@ TextureImporter:
       name: spritesheet peones_5
       rect:
         serializedVersion: 2
-        x: 872
-        y: 0.5
-        width: 436
-        height: 825.5
+        x: 428
+        y: 0
+        width: 428.75
+        height: 822
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -247,8 +247,50 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: d1729792222c84b4ca39ceb31015afd8
-      internalID: 1436310294
+      spriteID: 5fb6f68839a9f3b4c9ac25a79ebca5b9
+      internalID: -335213369
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: spritesheet peones_6
+      rect:
+        serializedVersion: 2
+        x: 856
+        y: 0
+        width: 428.75
+        height: 822
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 6be8e0549614c2f4cb95897cf57b8413
+      internalID: 926502836
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: spritesheet peones_7
+      rect:
+        serializedVersion: 2
+        x: 1284
+        y: 0
+        width: 428.75
+        height: 822
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: aab76e9fcf1232041800a9bedbf7fcd0
+      internalID: 310752678
       vertices: []
       indices: 
       edges: []
@@ -256,7 +298,7 @@ TextureImporter:
     outline: []
     physicsShape: []
     bones: []
-    spriteID: 0b8d921625ec4b241b85822a95fbda72
+    spriteID: 34539c966b9883c48abfbcdd19e0cf68
     internalID: 0
     vertices: []
     indices: 
@@ -264,12 +306,14 @@ TextureImporter:
     weights: []
     secondaryTextures: []
     nameFileIdTable:
-      spritesheet peones_5: 1436310294
-      spritesheet peones_3: -1560891553
-      spritesheet peones_0: 1232241572
-      spritesheet peones_2: -180172866
-      spritesheet peones_4: -737142161
-      spritesheet peones_1: -1114643716
+      spritesheet peones_5: -335213369
+      spritesheet peones_6: 926502836
+      spritesheet peones_3: -753917195
+      spritesheet peones_0: -1437318357
+      spritesheet peones_2: 91944497
+      spritesheet peones_4: -1966451761
+      spritesheet peones_7: 310752678
+      spritesheet peones_1: -366179977
   spritePackingTag: 
   pSDRemoveMatte: 0
   pSDShowRemoveMatteOption: 0

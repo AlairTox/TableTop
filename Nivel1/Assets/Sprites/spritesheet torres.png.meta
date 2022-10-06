@@ -132,18 +132,18 @@ TextureImporter:
       rect:
         serializedVersion: 2
         x: 0
-        y: 912
-        width: 434.66666
-        height: 912
+        y: 924
+        width: 428.75
+        height: 924
       alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 3c2e760c655c87445b9c4524c05fd035
-      internalID: 770907556
+      spriteID: 6a06c9f6305ffc246b0df495fec1ee0f
+      internalID: -709157412
       vertices: []
       indices: 
       edges: []
@@ -152,19 +152,19 @@ TextureImporter:
       name: spritesheet torres_1
       rect:
         serializedVersion: 2
-        x: 434
-        y: 912
-        width: 434.66666
-        height: 912
+        x: 428
+        y: 924
+        width: 428.75
+        height: 924
       alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 38fa24839949d93488aaf50a69537952
-      internalID: 187950272
+      spriteID: c2e0b3f1b9826a14b9a9114382174b69
+      internalID: 2048205768
       vertices: []
       indices: 
       edges: []
@@ -173,19 +173,19 @@ TextureImporter:
       name: spritesheet torres_2
       rect:
         serializedVersion: 2
-        x: 868
-        y: 912
-        width: 434.66666
-        height: 912
+        x: 856
+        y: 924
+        width: 428.75
+        height: 924
       alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: dbd5b7fbcaf2e134386db4fd60a3eeb4
-      internalID: 1320832652
+      spriteID: 827e72721d63ea1448b9f4516bb83d42
+      internalID: 809443899
       vertices: []
       indices: 
       edges: []
@@ -194,19 +194,19 @@ TextureImporter:
       name: spritesheet torres_3
       rect:
         serializedVersion: 2
-        x: 0
-        y: 0
-        width: 434.66666
-        height: 912
+        x: 1284
+        y: 924
+        width: 428.75
+        height: 924
       alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 10e6a2a018be56f41933f7f9b6f3f3de
-      internalID: -864804286
+      spriteID: 9504d47d4e3f5a541ba3053c01c9f387
+      internalID: -2049683012
       vertices: []
       indices: 
       edges: []
@@ -215,19 +215,19 @@ TextureImporter:
       name: spritesheet torres_4
       rect:
         serializedVersion: 2
-        x: 434
+        x: 0
         y: 0
-        width: 434.66666
-        height: 912
+        width: 428.75
+        height: 924
       alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 26fa5e2fbd9a6bd44ad2dcaf89e3fd8f
-      internalID: 1837322733
+      spriteID: 8c47eeea3d31f784082c5ebcc437e5c1
+      internalID: 899871615
       vertices: []
       indices: 
       edges: []
@@ -236,19 +236,61 @@ TextureImporter:
       name: spritesheet torres_5
       rect:
         serializedVersion: 2
-        x: 868
+        x: 428
         y: 0
-        width: 434.66666
-        height: 912
+        width: 428.75
+        height: 924
       alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 32e191898a2e123409f8ef20c57ce154
-      internalID: 228449611
+      spriteID: ced647a6494a74d41ac441b4d1b69761
+      internalID: -925487288
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: spritesheet torres_6
+      rect:
+        serializedVersion: 2
+        x: 856
+        y: 0
+        width: 428.75
+        height: 924
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 42b99aa2236f97e449d55eee5fcc9c55
+      internalID: 1238094343
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: spritesheet torres_7
+      rect:
+        serializedVersion: 2
+        x: 1284
+        y: 0
+        width: 428.75
+        height: 924
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 49e0b8dced3eeba49bd9320301514987
+      internalID: -196706881
       vertices: []
       indices: 
       edges: []
@@ -256,7 +298,7 @@ TextureImporter:
     outline: []
     physicsShape: []
     bones: []
-    spriteID: 62300ad9c22d9bb4aa762dd01ee62c74
+    spriteID: ce4d0ca580a36f741a597808eb5af711
     internalID: 0
     vertices: []
     indices: 
@@ -264,12 +306,14 @@ TextureImporter:
     weights: []
     secondaryTextures: []
     nameFileIdTable:
-      spritesheet torres_0: 770907556
-      spritesheet torres_4: 1837322733
-      spritesheet torres_3: -864804286
-      spritesheet torres_5: 228449611
-      spritesheet torres_2: 1320832652
-      spritesheet torres_1: 187950272
+      spritesheet torres_0: -709157412
+      spritesheet torres_4: 899871615
+      spritesheet torres_6: 1238094343
+      spritesheet torres_7: -196706881
+      spritesheet torres_3: -2049683012
+      spritesheet torres_5: -925487288
+      spritesheet torres_2: 809443899
+      spritesheet torres_1: 2048205768
   spritePackingTag: 
   pSDRemoveMatte: 0
   pSDShowRemoveMatteOption: 0

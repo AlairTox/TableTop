@@ -13,7 +13,7 @@ GameObject:
   - component: {fileID: 5240387532247987699}
   - component: {fileID: 6467058202678497517}
   - component: {fileID: 5571796161513713724}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: QueenProjectile
   m_TagString: Untagged
   m_Icon: {fileID: 0}

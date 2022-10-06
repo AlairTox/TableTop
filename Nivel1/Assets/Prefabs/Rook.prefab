@@ -15,7 +15,7 @@ GameObject:
   - component: {fileID: 8061666860084513272}
   m_Layer: 6
   m_Name: Rook
-  m_TagString: Untagged
+  m_TagString: Player
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -77,12 +77,12 @@ SpriteRenderer:
   m_SortingLayerID: -1748274187
   m_SortingLayer: 1
   m_SortingOrder: 0
-  m_Sprite: {fileID: 187950272, guid: 6a17b5c0eac72134ca3a7099e092e843, type: 3}
+  m_Sprite: {fileID: 2048205768, guid: 6a17b5c0eac72134ca3a7099e092e843, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
   m_DrawMode: 0
-  m_Size: {x: 4.25, y: 10}
+  m_Size: {x: 4.2875, y: 9.24}
   m_AdaptiveModeThreshold: 0.5
   m_SpriteTileMode: 0
   m_WasSpriteAssigned: 1
@@ -138,9 +138,10 @@ MonoBehaviour:
   maxZ: 100
   padding: 2
   newSprite:
-  - {fileID: 770907556, guid: 6a17b5c0eac72134ca3a7099e092e843, type: 3}
-  - {fileID: 187950272, guid: 6a17b5c0eac72134ca3a7099e092e843, type: 3}
-  - {fileID: 1320832652, guid: 6a17b5c0eac72134ca3a7099e092e843, type: 3}
+  - {fileID: -709157412, guid: 6a17b5c0eac72134ca3a7099e092e843, type: 3}
+  - {fileID: 2048205768, guid: 6a17b5c0eac72134ca3a7099e092e843, type: 3}
+  - {fileID: -2049683012, guid: 6a17b5c0eac72134ca3a7099e092e843, type: 3}
+  - {fileID: 809443899, guid: 6a17b5c0eac72134ca3a7099e092e843, type: 3}
   fireRate: 0.25
   projectilePrefab: {fileID: 1132424580817164973, guid: c39bd459a78b2574891e835624f1d35e,
     type: 3}

@@ -13,7 +13,7 @@ GameObject:
   - component: {fileID: 5240387532247987699}
   - component: {fileID: -5508201731436386201}
   - component: {fileID: 3590747426441792827}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: RookProjectile
   m_TagString: Untagged
   m_Icon: {fileID: 0}

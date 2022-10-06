@@ -13,7 +13,7 @@ GameObject:
   - component: {fileID: 5240387532247987699}
   - component: {fileID: 2741515741281024974}
   - component: {fileID: 5190213595973249734}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: HorseProjectile
   m_TagString: Untagged
   m_Icon: {fileID: 0}

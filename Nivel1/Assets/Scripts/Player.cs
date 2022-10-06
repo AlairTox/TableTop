@@ -73,7 +73,7 @@ public class Player : MonoBehaviour
         float ang = Mathf.Atan2(direction.y, direction.x) * Mathf.Rad2Deg;
 
         if(ang < -45 && ang >= -135){
-           sprite.sprite = newSprite[2];
+           sprite.sprite = newSprite[3];
             return;
         }
         if(ang > 45 && ang <= 135){
@@ -82,12 +82,10 @@ public class Player : MonoBehaviour
         }        
         if(ang > 135 || ang < -135){
             sprite.sprite = newSprite[0];
-            GetComponent<SpriteRenderer>().flipX = false;
             return;
         }
         if(ang > -45 && ang <= 45){
-            sprite.sprite = newSprite[0];
-            GetComponent<SpriteRenderer>().flipX = true;
+            sprite.sprite = newSprite[2];
             return;
         }
     }

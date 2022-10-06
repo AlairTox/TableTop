@@ -12,10 +12,10 @@ GameObject:
   - component: {fileID: 8995841226383743860}
   - component: {fileID: 8995841226383743861}
   - component: {fileID: 8995841226383743866}
-  - component: {fileID: 1582890357038717252}
+  - component: {fileID: -2650593049472513495}
   m_Layer: 6
   m_Name: Bishop
-  m_TagString: Untagged
+  m_TagString: Player
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -77,12 +77,12 @@ SpriteRenderer:
   m_SortingLayerID: -1748274187
   m_SortingLayer: 1
   m_SortingOrder: 0
-  m_Sprite: {fileID: 1642274515, guid: 107c7260b9d1e6141acb5af00c95216c, type: 3}
+  m_Sprite: {fileID: 251994714, guid: 107c7260b9d1e6141acb5af00c95216c, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
   m_DrawMode: 0
-  m_Size: {x: 4.25, y: 10}
+  m_Size: {x: 4.2875, y: 9.24}
   m_AdaptiveModeThreshold: 0.5
   m_SpriteTileMode: 0
   m_WasSpriteAssigned: 1
@@ -117,7 +117,7 @@ Rigidbody:
   m_Interpolate: 0
   m_Constraints: 116
   m_CollisionDetection: 1
---- !u!114 &1582890357038717252
+--- !u!114 &-2650593049472513495
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -126,24 +126,24 @@ MonoBehaviour:
   m_GameObject: {fileID: 8995841226383743867}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: f1e7e09b573abe3419f50940a589e004, type: 3}
+  m_Script: {fileID: 11500000, guid: da02d0f301736004faa0b2bcf7e60fec, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   moveSpeed: 3
   minX: -100
-  minY: -100
+  minY: -10
   minZ: -100
   maxX: 100
   maxY: 100
   maxZ: 100
-  padding: 0
+  padding: 2
   newSprite:
-  - {fileID: -107035956, guid: 107c7260b9d1e6141acb5af00c95216c, type: 3}
-  - {fileID: 1642274515, guid: 107c7260b9d1e6141acb5af00c95216c, type: 3}
-  - {fileID: -1195846935, guid: 107c7260b9d1e6141acb5af00c95216c, type: 3}
-  - {fileID: -1886608308, guid: 107c7260b9d1e6141acb5af00c95216c, type: 3}
+  - {fileID: -2014296964, guid: 107c7260b9d1e6141acb5af00c95216c, type: 3}
+  - {fileID: 251994714, guid: 107c7260b9d1e6141acb5af00c95216c, type: 3}
+  - {fileID: -535558847, guid: 107c7260b9d1e6141acb5af00c95216c, type: 3}
+  - {fileID: 1705317335, guid: 107c7260b9d1e6141acb5af00c95216c, type: 3}
   fireRate: 0.25
-  projectilePrefab: {fileID: -842202306517953128, guid: 9c377a32234905f4c80d7585bd746f1a,
+  projectilePrefab: {fileID: 1132424580817164973, guid: 9c377a32234905f4c80d7585bd746f1a,
     type: 3}
   FireSpark: {fileID: 0}
   projectiles: {fileID: 8995841226383743863}

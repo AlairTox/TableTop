@@ -15,7 +15,7 @@ GameObject:
   - component: {fileID: -2219194391647894421}
   m_Layer: 6
   m_Name: Horse
-  m_TagString: Untagged
+  m_TagString: Player
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -77,12 +77,12 @@ SpriteRenderer:
   m_SortingLayerID: -1748274187
   m_SortingLayer: 1
   m_SortingOrder: 0
-  m_Sprite: {fileID: 1450554386, guid: d4ac1252882de954cac1df3178931670, type: 3}
+  m_Sprite: {fileID: 601660324, guid: d4ac1252882de954cac1df3178931670, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
   m_DrawMode: 0
-  m_Size: {x: 4.25, y: 10}
+  m_Size: {x: 4.09, y: 9.24}
   m_AdaptiveModeThreshold: 0.5
   m_SpriteTileMode: 0
   m_WasSpriteAssigned: 1
@@ -138,9 +138,10 @@ MonoBehaviour:
   maxZ: 100
   padding: 2
   newSprite:
-  - {fileID: -279997079, guid: d4ac1252882de954cac1df3178931670, type: 3}
-  - {fileID: 1450554386, guid: d4ac1252882de954cac1df3178931670, type: 3}
-  - {fileID: 1546050176, guid: d4ac1252882de954cac1df3178931670, type: 3}
+  - {fileID: 196293607, guid: d4ac1252882de954cac1df3178931670, type: 3}
+  - {fileID: 601660324, guid: d4ac1252882de954cac1df3178931670, type: 3}
+  - {fileID: 1120559069, guid: d4ac1252882de954cac1df3178931670, type: 3}
+  - {fileID: -1785230116, guid: d4ac1252882de954cac1df3178931670, type: 3}
   fireRate: 0.25
   projectilePrefab: {fileID: 1132424580817164973, guid: 95a6b284ab057c54dbfade3c6f397084,
     type: 3}
