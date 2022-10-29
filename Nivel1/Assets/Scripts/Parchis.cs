@@ -1,6 +1,4 @@
 
-using System.Diagnostics;
-using System;
 using System.Threading;
 using System.Transactions;
 using System.Collections;
@@ -9,23 +7,24 @@ using UnityEngine;
 
 public class Parchis : MonoBehaviour
 {
+    [SerializeField] GameObject upgradePoint;
+
     [Header("Health")]
     [SerializeField] int health;
     [SerializeField] int damage;
     
-    [Header("Move")]
-
+    int random;
     Player player;
 
     Rigidbody rigidBody;
     void Start()
     {
         rigidBody = gameObject.GetComponent<Rigidbody>();
-        player = FindObjectOfType<Player>();
     }
 
     void Update()
     {
+        player = FindObjectOfType<Player>();
         Move();
     }
 
@@ -58,8 +57,15 @@ public class Parchis : MonoBehaviour
 
     public void processHit(int damage){
         health -= damage;
-        if(health == 0)
+        if(health == 0){
+            //Se obtine un número aleatorio entre  0 y 1
+            random = Random.Range(0,2);
+            if(random == 1)
+                //Si el número obtenido es 1 se crea un objeto de tipo upgreadePoint
+                Instantiate(upgradePoint, transform.position, upgradePoint.transform.rotation);
+            //Se destruye al enemigo
             Destroy(gameObject);
+        }
     }
     void OnCollisionEnter(Collision collision){
         processHit(damage);

@@ -1,3 +1,5 @@
+
+using System.Data;
 using System.Runtime.CompilerServices;
 using System.ComponentModel;
 using System.Numerics;
@@ -7,6 +9,9 @@ using UnityEngine;
 
 public class Player : MonoBehaviour
 {
+    [Header("Player")]
+    [SerializeField] GameObject[] PlayerPrefabs;
+
     [Header("Move")]
     [SerializeField] float moveSpeed;
     [SerializeField] float minX, minY, minZ, maxX, maxY, maxZ, padding;
@@ -15,9 +20,10 @@ public class Player : MonoBehaviour
     [Header("Fire")]
     [SerializeField] float fireRate;
     [SerializeField] GameObject projectilePrefab;
-    [SerializeField] FireSpark FireSpark;
     [SerializeField] public Transform projectiles;
+    //[SerializeField] GameObject shootPrefab;
 
+    FireSpark FireSpark;
     Rigidbody rigidBody;
     Coroutine fireCoroutine;
     SpriteRenderer sprite;
@@ -25,6 +31,7 @@ public class Player : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
+        FireSpark = FindObjectOfType<FireSpark>();
         rigidBody =  gameObject.GetComponent<Rigidbody>();
         sprite = gameObject.GetComponent<SpriteRenderer>();
     }
@@ -50,8 +57,10 @@ public class Player : MonoBehaviour
     void Fire(){
         if(Input.GetButtonDown("Fire1"))
             fireCoroutine = StartCoroutine(FireContinuosly());
-        if(Input.GetButtonUp("Fire1"))
-            StopCoroutine(fireCoroutine);
+        if(fireCoroutine != null){
+            if(Input.GetButtonUp("Fire1"))
+                StopCoroutine(fireCoroutine);
+        }
     }
 
     IEnumerator FireContinuosly(){
@@ -64,6 +73,8 @@ public class Player : MonoBehaviour
     private void ShootProjectile(UnityEngine.Vector3 projectilePosition){
         var newProjectile = Instantiate(projectilePrefab, projectilePosition, UnityEngine.Quaternion.identity);
         newProjectile.transform.SetParent(projectiles);
+        // var newShoot = Instantiate(shootPrefab, transform.position, UnityEngine.Quaternion.identity);
+        // newShoot.transform.SetParent(transform);
     }
 
     private void changeSprite(){
@@ -89,5 +100,6 @@ public class Player : MonoBehaviour
             return;
         }
     }
+
 }
 

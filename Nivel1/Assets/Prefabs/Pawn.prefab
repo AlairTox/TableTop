@@ -96,7 +96,7 @@ BoxCollider:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 8995841226383743867}
   m_Material: {fileID: 0}
-  m_IsTrigger: 0
+  m_IsTrigger: 1
   m_Enabled: 1
   serializedVersion: 2
   m_Size: {x: 3.505605, y: 7.5418687, z: 0.21114373}
@@ -129,6 +129,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: da02d0f301736004faa0b2bcf7e60fec, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  PlayerPrefabs: []
   moveSpeed: 3
   minX: -100
   minY: -100
@@ -145,7 +146,6 @@ MonoBehaviour:
   fireRate: 0.25
   projectilePrefab: {fileID: 1132424580817164973, guid: 10d68e912a89820458a94ef8961cbc87,
     type: 3}
-  FireSpark: {fileID: 0}
   projectiles: {fileID: 8995841226383743863}
 --- !u!1001 &652970949766751303
 PrefabInstance:

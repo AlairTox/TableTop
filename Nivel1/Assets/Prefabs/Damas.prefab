@@ -14,9 +14,9 @@ GameObject:
   - component: {fileID: 658906066217398032}
   - component: {fileID: 658906066217398033}
   - component: {fileID: 658906066217398034}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: Damas
-  m_TagString: Untagged
+  m_TagString: Enemy
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -112,8 +112,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b2eaed63e87285b49a38bc68b4181ce8, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  upgradePoint: {fileID: 5879772976404530705, guid: b79f12f8d2a854749bb1aaa7dae158d8,
+    type: 3}
   health: 500
-  damage: 10
+  damage: 100
 --- !u!54 &658906066217398034
 Rigidbody:
   m_ObjectHideFlags: 0

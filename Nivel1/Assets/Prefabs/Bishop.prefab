@@ -147,6 +147,7 @@ MonoBehaviour:
     type: 3}
   FireSpark: {fileID: 0}
   projectiles: {fileID: 8995841226383743863}
+  shootPrefab: {fileID: 0}
 --- !u!1001 &652970949766751303
 PrefabInstance:
   m_ObjectHideFlags: 0

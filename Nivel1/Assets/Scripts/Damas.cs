@@ -1,17 +1,19 @@
 
 using System.Security.AccessControl;
 using System.Collections;
-using System;
 using System.Collections.Generic;
 using UnityEngine;
 
 public class Damas : MonoBehaviour
 {
 
+    [SerializeField] GameObject upgradePoint; 
+
     [Header("Health")]
     [SerializeField] int health;
     [SerializeField] int damage;
 
+    int random;
     Rigidbody rigidBody;
 
     // Start is called before the first frame update
@@ -35,12 +37,21 @@ public class Damas : MonoBehaviour
 
     public void processHit(int damage){
         health -= damage;
-        if(health == 0)
+        if(health == 0){
+            //Se obtiene un número aleatorio entre 0 y 1
+            random = Random.Range(0,2);
+            if(random == 1)
+                //Si el número obtenido es 1 se crea un objeto de tipo upgradePoint
+                Instantiate(upgradePoint, transform.position, upgradePoint.transform.rotation);
+            //Se destruye al enemigo(ya no tiene vida)
             Destroy(gameObject);
+        }
+
     }
     void OnCollisionEnter(Collision collision){
         processHit(damage);
     }
+
     IEnumerator Jump(){
         //Tiempo de espera entre salto
         yield return new WaitForSeconds(4f);

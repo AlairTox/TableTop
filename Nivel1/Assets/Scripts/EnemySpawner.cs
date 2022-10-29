@@ -18,6 +18,7 @@ public class EnemySpawner : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+
     }
 
     void CreateEnemy(GameObject prefab, UnityEngine.Vector3 position){
