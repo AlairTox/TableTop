@@ -13,6 +13,7 @@ GameObject:
   - component: {fileID: 8995841226383743861}
   - component: {fileID: 8995841226383743866}
   - component: {fileID: 7155700646913018363}
+  - component: {fileID: 6453021350369747514}
   m_Layer: 6
   m_Name: Pawn
   m_TagString: Player
@@ -96,7 +97,7 @@ BoxCollider:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 8995841226383743867}
   m_Material: {fileID: 0}
-  m_IsTrigger: 1
+  m_IsTrigger: 0
   m_Enabled: 1
   serializedVersion: 2
   m_Size: {x: 3.505605, y: 7.5418687, z: 0.21114373}
@@ -130,6 +131,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   PlayerPrefabs: []
+  health: 0
   moveSpeed: 3
   minX: -100
   minY: -100
@@ -147,6 +149,18 @@ MonoBehaviour:
   projectilePrefab: {fileID: 1132424580817164973, guid: 10d68e912a89820458a94ef8961cbc87,
     type: 3}
   projectiles: {fileID: 8995841226383743863}
+--- !u!114 &6453021350369747514
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8995841226383743867}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 2a99effc38e59f347a738087f073d44a, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1001 &652970949766751303
 PrefabInstance:
   m_ObjectHideFlags: 0

@@ -33,6 +33,7 @@ public class EnemySpawner : MonoBehaviour
         //Inicio de spawn
         StartCoroutine(SpawnParchis());
         StartCoroutine(SpawnDamas());
+        StartCoroutine(SpawnMatatena());
     }
     
     IEnumerator SpawnParchis(){
@@ -55,5 +56,11 @@ public class EnemySpawner : MonoBehaviour
         CreateEnemy(enemyPrefabs[1], position);
         //Creación de Parchis nuevamente
         StartCoroutine(SpawnDamas());
+    }
+    IEnumerator SpawnMatatena(){
+        yield return new WaitForSeconds(5f);
+        UnityEngine.Vector3 position = new Vector3(Random.Range(-12, 12), 0.5f, Random.Range(-11, 22));
+        CreateEnemy(enemyPrefabs[2], position);
+        StartCoroutine(SpawnMatatena());
     }
 }

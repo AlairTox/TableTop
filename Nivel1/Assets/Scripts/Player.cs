@@ -1,4 +1,5 @@
 
+using System.Drawing;
 using System.Data;
 using System.Runtime.CompilerServices;
 using System.ComponentModel;
@@ -11,6 +12,7 @@ public class Player : MonoBehaviour
 {
     [Header("Player")]
     [SerializeField] GameObject[] PlayerPrefabs;
+    [SerializeField] int health;
 
     [Header("Move")]
     [SerializeField] float moveSpeed;
@@ -21,19 +23,23 @@ public class Player : MonoBehaviour
     [SerializeField] float fireRate;
     [SerializeField] GameObject projectilePrefab;
     [SerializeField] public Transform projectiles;
-    //[SerializeField] GameObject shootPrefab;
 
     FireSpark FireSpark;
     Rigidbody rigidBody;
     Coroutine fireCoroutine;
     SpriteRenderer sprite;
+    bool isInvinsible;
+    Animator animator;
 
     // Start is called before the first frame update
     void Start()
     {
+        animator = gameObject.GetComponent<Animator>();
         FireSpark = FindObjectOfType<FireSpark>();
         rigidBody =  gameObject.GetComponent<Rigidbody>();
         sprite = gameObject.GetComponent<SpriteRenderer>();
+        isInvinsible = true;
+        StartCoroutine(RemoveInvincibility());
     }
 
     // Update is called once per frame
@@ -73,8 +79,6 @@ public class Player : MonoBehaviour
     private void ShootProjectile(UnityEngine.Vector3 projectilePosition){
         var newProjectile = Instantiate(projectilePrefab, projectilePosition, UnityEngine.Quaternion.identity);
         newProjectile.transform.SetParent(projectiles);
-        // var newShoot = Instantiate(shootPrefab, transform.position, UnityEngine.Quaternion.identity);
-        // newShoot.transform.SetParent(transform);
     }
 
     private void changeSprite(){
@@ -101,5 +105,19 @@ public class Player : MonoBehaviour
         }
     }
 
+    void OnCollisionEnter(Collision collision){
+        if(!isInvinsible){
+            if(collision.gameObject.layer == 7)
+                FindObjectOfType<GameManager>().processDeath();
+        }
+    }
+
+    IEnumerator RemoveInvincibility()
+    {
+        yield return new WaitForSeconds(3f);
+        Destroy(GetComponent<Blinker>());
+        GetComponent<SpriteRenderer>().color = UnityEngine.Color.white;
+        isInvinsible = false;
+    }
 }
 

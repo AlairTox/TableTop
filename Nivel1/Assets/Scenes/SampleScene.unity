@@ -587,6 +587,7 @@ MonoBehaviour:
   enemyPrefabs:
   - {fileID: 2395899444763336652, guid: ba21591b0e5af4d4689aea20ad167caf, type: 3}
   - {fileID: 658906066217398035, guid: fe7e66cc22095fe4093e811ec9449433, type: 3}
+  - {fileID: 2225953639561532929, guid: bcb66b68e8a942f4ba995b055262778c, type: 3}
   delayTime: 1.5
 --- !u!4 &1929846891
 Transform:

@@ -7,7 +7,7 @@ using UnityEngine;
 public class GameManager : MonoBehaviour
 {
     [SerializeField] [Range(0,5)] float gameSpeed;
-    [SerializeField] int lives;
+    [SerializeField] int lifes;
     [SerializeField] GameObject[] prefabsPlayer;
 
     Transform position;
@@ -38,7 +38,25 @@ public class GameManager : MonoBehaviour
     }
 
     public void processDeath(){
-        lives--;
+        
+        upgradePoints = 0;
+        upgradeLevel--;
+        position = player.transform;
+        
+        if(upgradeLevel == -1)
+            upgradeLevel++;
+
+        Destroy(player);
+        player = Instantiate(prefabsPlayer[upgradeLevel], position.position, prefabsPlayer[upgradeLevel].transform.rotation);
+        
+        UnityEngine.Debug.Log("Muerte");
+        lifes--;
+
+        if(lifes == 0){
+            //Game Over
+            gameSpeed = 0;
+            Destroy(player);
+        }
     }
 
     public void changePlayer(){
