@@ -23,18 +23,20 @@ public class Player : MonoBehaviour
     [SerializeField] float fireRate;
     [SerializeField] GameObject projectilePrefab;
     [SerializeField] public Transform projectiles;
+    
+    [Header("Aniamtions")]
+    [SerializeField] Animator[] animator;
 
     FireSpark FireSpark;
     Rigidbody rigidBody;
     Coroutine fireCoroutine;
     SpriteRenderer sprite;
     bool isInvinsible;
-    Animator animator;
 
     // Start is called before the first frame update
     void Start()
     {
-        animator = gameObject.GetComponent<Animator>();
+        animator[0].enabled = false;
         FireSpark = FindObjectOfType<FireSpark>();
         rigidBody =  gameObject.GetComponent<Rigidbody>();
         sprite = gameObject.GetComponent<SpriteRenderer>();
@@ -79,6 +81,7 @@ public class Player : MonoBehaviour
     private void ShootProjectile(UnityEngine.Vector3 projectilePosition){
         var newProjectile = Instantiate(projectilePrefab, projectilePosition, UnityEngine.Quaternion.identity);
         newProjectile.transform.SetParent(projectiles);
+        StartCoroutine(shootAnimation());
     }
 
     private void changeSprite(){
@@ -118,6 +121,13 @@ public class Player : MonoBehaviour
         Destroy(GetComponent<Blinker>());
         GetComponent<SpriteRenderer>().color = UnityEngine.Color.white;
         isInvinsible = false;
+    }
+    IEnumerator shootAnimation(){
+        animator[0].enabled = true;
+        animator[0].Play("Base Layer.BishopSmallFront", 0, 0.25f);
+        yield return new WaitForSeconds(0.5f);
+        animator[0].enabled = false;
+
     }
 }
 
