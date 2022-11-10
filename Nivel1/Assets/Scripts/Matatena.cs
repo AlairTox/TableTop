@@ -27,7 +27,7 @@ public class Matatena : MonoBehaviour
     {
         if(transform.position.y <= 2)
             rigidBody.constraints = RigidbodyConstraints.FreezePositionY;
-        if((transform.position.z > 50 || transform.position.z < -30) || (transform.position.x < -30 || transform.position.z > 30)){
+        if((transform.position.z > 18 || transform.position.z < -15) || (transform.position.x < -30 || transform.position.z > 25)){
             Destroy(shadowObj);
             Destroy(gameObject);
         }
