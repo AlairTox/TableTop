@@ -8,16 +8,22 @@ using UnityEngine;
 public class Parchis : MonoBehaviour
 {
     [SerializeField] GameObject upgradePoint;
+    [SerializeField] Sprite[] actualSprite;
+
 
     [Header("Health")]
     [SerializeField] int health;
     [SerializeField] int damage;
     
+    SpriteRenderer sprite;
     int random;
     Player player;
     Rigidbody rigidBody;
     void Start()
     {
+        sprite = gameObject.GetComponent<SpriteRenderer>();
+        random = Random.Range(0,2);
+        sprite.sprite = actualSprite[random];
         rigidBody = gameObject.GetComponent<Rigidbody>();
     }
 

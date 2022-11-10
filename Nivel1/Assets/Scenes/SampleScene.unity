@@ -533,7 +533,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   gameSpeed: 1
-  lifes: 10
+  lifes: 100
   prefabsPlayer:
   - {fileID: 8995841226383743867, guid: 749d413fc62f175468ba9920ed3c2317, type: 3}
   - {fileID: 8995841226383743867, guid: 819be76cc0726b74cb6131755f340cf1, type: 3}

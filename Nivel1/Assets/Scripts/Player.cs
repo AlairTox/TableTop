@@ -57,16 +57,12 @@ public class Player : MonoBehaviour
         //Se obtienen las teclas pulsadas por el jugador WASD para determinar hacia donde se movera
         float deltaX = Input.GetAxis("Horizontal") * moveSpeed * Time.deltaTime * 5;
         float deltaZ = -(Input.GetAxis("Vertical") * moveSpeed * Time.deltaTime * 5);
-        // if(deltaX == 0 && deltaZ == 0){
-        //     transform.rotation = Quaternion.Slerp(transform.rotation, rotation0, 1f);
-        // }else{
-        //     StartCoroutine(animationMove());
-        // }
         //Se calcula la nueva posición del jugador
         float newPosX = Mathf.Clamp(transform.position.x + deltaX, minX + padding, maxX - padding);
         float newPosZ = Mathf.Clamp(transform.position.z + deltaZ, minZ + padding, maxZ - padding);
         //Se desplaza el gameObject del jugador a la nueva posición
         rigidBody.MovePosition(new UnityEngine.Vector3(newPosX, transform.position.y, newPosZ));        
+
     }
 
     void Fire(){
@@ -184,14 +180,5 @@ public class Player : MonoBehaviour
             animator.enabled = false;
         }
     }
-
-    // IEnumerator animationMove(){
-    //     Quaternion newRotation = Quaternion.Euler(45, 15, 0);
-    //     transform.rotation = Quaternion.Slerp(transform.rotation, newRotation, 0.2f);
-    //     yield return new WaitForSeconds(1f);
-    //     newRotation = Quaternion.Euler(45, -15, 0);
-    //     transform.rotation = Quaternion.Slerp(transform.rotation, newRotation, 0.2f);
-    //     StopCoroutine(animationMove());
-    // }
 }
 

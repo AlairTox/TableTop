@@ -32,7 +32,7 @@ public class EnemySpawner : MonoBehaviour
         yield return new WaitForSeconds(delayTime);
         //Inicio de spawn
         StartCoroutine(SpawnParchis());
-        StartCoroutine(SpawnDamas());
+        // StartCoroutine(SpawnDamas());
         StartCoroutine(SpawnMatatena());
     }
     
