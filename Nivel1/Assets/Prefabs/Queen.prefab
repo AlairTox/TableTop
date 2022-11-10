@@ -14,6 +14,7 @@ GameObject:
   - component: {fileID: 8995841226383743866}
   - component: {fileID: -8829346064846849624}
   - component: {fileID: 653016372409300915}
+  - component: {fileID: -7330048956931120556}
   m_Layer: 6
   m_Name: Queen
   m_TagString: Player
@@ -78,7 +79,7 @@ SpriteRenderer:
   m_SortingLayerID: -1748274187
   m_SortingLayer: 1
   m_SortingOrder: 0
-  m_Sprite: {fileID: 978368404, guid: a5da315405a7a784fbc7ac3b08fc0fb3, type: 3}
+  m_Sprite: {fileID: -407789651, guid: b344d92963668ca42a2084e61a4ca63c, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
@@ -130,8 +131,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: da02d0f301736004faa0b2bcf7e60fec, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  PlayerPrefabs: []
-  health: 0
   moveSpeed: 3
   minX: -100
   minY: -100
@@ -141,10 +140,10 @@ MonoBehaviour:
   maxZ: 100
   padding: 2
   newSprite:
-  - {fileID: -2079095462, guid: a5da315405a7a784fbc7ac3b08fc0fb3, type: 3}
-  - {fileID: 978368404, guid: a5da315405a7a784fbc7ac3b08fc0fb3, type: 3}
-  - {fileID: -737994231, guid: a5da315405a7a784fbc7ac3b08fc0fb3, type: 3}
-  - {fileID: 367723638, guid: a5da315405a7a784fbc7ac3b08fc0fb3, type: 3}
+  - {fileID: -1905233469, guid: b344d92963668ca42a2084e61a4ca63c, type: 3}
+  - {fileID: -407789651, guid: b344d92963668ca42a2084e61a4ca63c, type: 3}
+  - {fileID: 1686873292, guid: b344d92963668ca42a2084e61a4ca63c, type: 3}
+  - {fileID: -991527430, guid: b344d92963668ca42a2084e61a4ca63c, type: 3}
   fireRate: 0.25
   projectilePrefab: {fileID: 1132424580817164973, guid: 770700d7ba660b649abc5a4fab9118ed,
     type: 3}
@@ -161,6 +160,27 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 2a99effc38e59f347a738087f073d44a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  minAlpha: 0
+--- !u!95 &-7330048956931120556
+Animator:
+  serializedVersion: 4
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8995841226383743867}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: 4b5324d36a5ee1e44bf8e7b0b70ac452, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_StabilizeFeet: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorControllerStateOnDisable: 0
 --- !u!1001 &652970949766751303
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -186,17 +206,17 @@ PrefabInstance:
     - target: {fileID: 4664661159343076470, guid: b8c70ddb4a6b08e4daac1dfde5545af0,
         type: 3}
       propertyPath: m_LocalPosition.x
-      value: 0.12
+      value: -0.09
       objectReference: {fileID: 0}
     - target: {fileID: 4664661159343076470, guid: b8c70ddb4a6b08e4daac1dfde5545af0,
         type: 3}
       propertyPath: m_LocalPosition.y
-      value: 3.21
+      value: 2.93
       objectReference: {fileID: 0}
     - target: {fileID: 4664661159343076470, guid: b8c70ddb4a6b08e4daac1dfde5545af0,
         type: 3}
       propertyPath: m_LocalPosition.z
-      value: 0.07
+      value: -0.01
       objectReference: {fileID: 0}
     - target: {fileID: 4664661159343076470, guid: b8c70ddb4a6b08e4daac1dfde5545af0,
         type: 3}

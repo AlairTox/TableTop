@@ -113,7 +113,7 @@ Rigidbody:
   m_UseGravity: 1
   m_IsKinematic: 0
   m_Interpolate: 0
-  m_Constraints: 126
+  m_Constraints: 122
   m_CollisionDetection: 0
 --- !u!114 &619855528182123249
 MonoBehaviour:
@@ -129,3 +129,4 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   upgradePoint: {fileID: 5879772976404530705, guid: b79f12f8d2a854749bb1aaa7dae158d8,
     type: 3}
+  shadow: {fileID: 2501342571858937640, guid: 06b32cd247c890f489ccfed60c451ee4, type: 3}

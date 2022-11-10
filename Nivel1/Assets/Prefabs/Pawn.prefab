@@ -14,6 +14,7 @@ GameObject:
   - component: {fileID: 8995841226383743866}
   - component: {fileID: 7155700646913018363}
   - component: {fileID: 6453021350369747514}
+  - component: {fileID: -1822269174452050510}
   m_Layer: 6
   m_Name: Pawn
   m_TagString: Player
@@ -130,8 +131,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: da02d0f301736004faa0b2bcf7e60fec, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  PlayerPrefabs: []
-  health: 0
   moveSpeed: 3
   minX: -100
   minY: -100
@@ -161,6 +160,27 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 2a99effc38e59f347a738087f073d44a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  minAlpha: 0
+--- !u!95 &-1822269174452050510
+Animator:
+  serializedVersion: 4
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8995841226383743867}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: 318de96e206da20459c1139f60d02d2a, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_StabilizeFeet: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorControllerStateOnDisable: 0
 --- !u!1001 &652970949766751303
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -191,12 +211,12 @@ PrefabInstance:
     - target: {fileID: 4664661159343076470, guid: b8c70ddb4a6b08e4daac1dfde5545af0,
         type: 3}
       propertyPath: m_LocalPosition.y
-      value: 1.74
+      value: 1.66
       objectReference: {fileID: 0}
     - target: {fileID: 4664661159343076470, guid: b8c70ddb4a6b08e4daac1dfde5545af0,
         type: 3}
       propertyPath: m_LocalPosition.z
-      value: 0.1
+      value: -0.1
       objectReference: {fileID: 0}
     - target: {fileID: 4664661159343076470, guid: b8c70ddb4a6b08e4daac1dfde5545af0,
         type: 3}

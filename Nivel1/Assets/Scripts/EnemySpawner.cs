@@ -45,8 +45,9 @@ public class EnemySpawner : MonoBehaviour
         //Creación de Parchis nuevamente
         StartCoroutine(SpawnParchis());
     }
+    
     IEnumerator SpawnDamas(){
-        //Tiempo de espera entre la aparición de Parchis
+        //Tiempo de espera entre la aparición de Damas
         yield return new WaitForSeconds(4f);
         //Obtención de una ubicación aleatoria dentro del campo de juego
         UnityEngine.Vector3 position = new UnityEngine.Vector3(Random.Range(-12, 12), 0.2f, 22);
@@ -54,13 +55,17 @@ public class EnemySpawner : MonoBehaviour
         //Se espera medio segundo para generar la pareja
         yield return new WaitForSeconds(0.5f);
         CreateEnemy(enemyPrefabs[1], position);
-        //Creación de Parchis nuevamente
+        //Creación de Dama nuevamente
         StartCoroutine(SpawnDamas());
     }
+
     IEnumerator SpawnMatatena(){
+        //Tiempo de espera entre la aparición de Matatenas
         yield return new WaitForSeconds(5f);
-        UnityEngine.Vector3 position = new Vector3(Random.Range(-12, 12), 0.5f, Random.Range(-11, 22));
+        //Obtención de una ubicación aleatoria dentro del campo de juego
+        UnityEngine.Vector3 position = new Vector3(Random.Range(-12, 12), 30f, Random.Range(-11, 22));
         CreateEnemy(enemyPrefabs[2], position);
+        //Creación de Matatena nuevamente
         StartCoroutine(SpawnMatatena());
     }
 }

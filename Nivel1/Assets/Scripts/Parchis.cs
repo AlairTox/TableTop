@@ -15,7 +15,6 @@ public class Parchis : MonoBehaviour
     
     int random;
     Player player;
-
     Rigidbody rigidBody;
     void Start()
     {
@@ -24,6 +23,7 @@ public class Parchis : MonoBehaviour
 
     void Update()
     {
+        //Se busca dentro de la escena un objeto de tipo Player
         player = FindObjectOfType<Player>();
         Move();
     }
@@ -56,6 +56,7 @@ public class Parchis : MonoBehaviour
     }
 
     public void processHit(int damage){
+        //Se le resta vida
         health -= damage;
         if(health == 0){
             //Se obtine un número aleatorio entre  0 y 1
@@ -67,6 +68,7 @@ public class Parchis : MonoBehaviour
             Destroy(gameObject);
         }
     }
+    //Si se detecta una colisión de culaquier tipo
     void OnCollisionEnter(Collision collision){
         processHit(damage);
     }

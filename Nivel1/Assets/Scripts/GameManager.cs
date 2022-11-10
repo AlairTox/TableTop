@@ -38,20 +38,20 @@ public class GameManager : MonoBehaviour
     }
 
     public void processDeath(){
-        
+        //Se restablece a 0 los puntos de upgrade
         upgradePoints = 0;
+        //Se resta en uno el nivel de upgrade
         upgradeLevel--;
+        //Obtención de la posición del jugador
         position = player.transform;
-        
+        //Si el jugador murió siendo un peón entonces se suma en uno el nivel de upgrade para que vuelva a ser un peón
         if(upgradeLevel == -1)
             upgradeLevel++;
-
+        //Se destruye el jugador actual para crear inmediatamente uno nuevo con las características actualizadas
         Destroy(player);
         player = Instantiate(prefabsPlayer[upgradeLevel], position.position, prefabsPlayer[upgradeLevel].transform.rotation);
-        
-        UnityEngine.Debug.Log("Muerte");
+        //Se resta una vida al jugador
         lifes--;
-
         if(lifes == 0){
             //Game Over
             gameSpeed = 0;
