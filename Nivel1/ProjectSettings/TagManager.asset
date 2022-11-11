@@ -5,6 +5,7 @@ TagManager:
   serializedVersion: 2
   tags:
   - Enemy
+  - Points
   layers:
   - Default
   - TransparentFX
@@ -16,7 +17,7 @@ TagManager:
   - Enemy
   - Player Projectile
   - Enemy Projectile
-  - 
+  - Poins
   - 
   - 
   - 
@@ -53,4 +54,7 @@ TagManager:
     locked: 0
   - name: Enemy Projectile
     uniqueID: 2932449547
+    locked: 0
+  - name: Points
+    uniqueID: 117131909
     locked: 0

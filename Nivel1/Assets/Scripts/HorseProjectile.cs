@@ -11,7 +11,7 @@ using UnityEngine;
 
 public class HorseProjectile : MonoBehaviour
 {
-    [SerializeField] int damage;
+
     Rigidbody rigidBody;
     Coroutine enableCollider;
     Collider projectileCollider;    

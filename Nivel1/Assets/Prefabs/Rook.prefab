@@ -133,10 +133,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   moveSpeed: 3
   minX: -100
-  minY: -100
   minZ: -100
   maxX: 100
-  maxY: 100
   maxZ: 100
   padding: 2
   newSprite:
@@ -148,6 +146,10 @@ MonoBehaviour:
   projectilePrefab: {fileID: 1132424580817164973, guid: c39bd459a78b2574891e835624f1d35e,
     type: 3}
   projectiles: {fileID: 8995841226383743863}
+  shootSFX: {fileID: 8300000, guid: a850aee2e169baf47ac8591f34527e31, type: 3}
+  shootSFXVolume: 0.1
+  hitSFX: {fileID: 8300000, guid: c281e27bf12a4fb4d8234cc82c86de27, type: 3}
+  hitSFXVolume: 0.1
 --- !u!114 &-3047353063692771681
 MonoBehaviour:
   m_ObjectHideFlags: 0

@@ -1,4 +1,5 @@
 
+using System;
 using System.Drawing;
 using System.Data;
 using System.Runtime.CompilerServices;
@@ -12,7 +13,7 @@ public class Player : MonoBehaviour
 
     [Header("Move")]
     [SerializeField] float moveSpeed;
-    [SerializeField] float minX, minY, minZ, maxX, maxY, maxZ, padding;
+    [SerializeField] float minX, minZ, maxX, maxZ, padding;
     [SerializeField] Sprite[] newSprite;
     
     [Header("Fire")]
@@ -20,6 +21,12 @@ public class Player : MonoBehaviour
     [SerializeField] GameObject projectilePrefab;
     [SerializeField] public Transform projectiles;
     
+    [Header("SFX")]
+    [SerializeField] AudioClip shootSFX;
+    [SerializeField] [Range(0,1)] float shootSFXVolume;
+    [SerializeField] AudioClip hitSFX;
+    [SerializeField] [Range(0, 1)] float hitSFXVolume;
+
     Animator animator;
     FireSpark FireSpark;
     Rigidbody rigidBody;
@@ -90,6 +97,7 @@ public class Player : MonoBehaviour
         //Generación de un nuevo gameObject de tipo bala
         var newProjectile = Instantiate(projectilePrefab, projectilePosition, UnityEngine.Quaternion.identity);
         newProjectile.transform.SetParent(projectiles);
+        AudioSource.PlayClipAtPoint(shootSFX, Camera.main.transform.position, shootSFXVolume);
         //Inicio de animación de disparo
         StartCoroutine(shootAnimation());
     }
@@ -128,6 +136,7 @@ public class Player : MonoBehaviour
         if(!isInvinsible){
             //Si la colisión ocurre con un enemigo(layer 7)
             if(collision.gameObject.layer == 7)
+                AudioSource.PlayClipAtPoint(hitSFX, Camera.main.transform.position, hitSFXVolume);
                 //Se le quita una vida al jugador
                 FindObjectOfType<GameManager>().processDeath();
         }

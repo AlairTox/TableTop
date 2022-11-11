@@ -4,9 +4,12 @@ using UnityEngine;
 
 public class Matatena : MonoBehaviour
 {
+    [SerializeField] Sprite[] actualSprite;
+    
+    [Header("Prefabs")]
     [SerializeField] GameObject upgradePoint;
     [SerializeField] GameObject shadow;
-    [SerializeField] Sprite[] actualSprite;
+
     int random;
     GameObject shadowObj;
     Rigidbody rigidBody;
@@ -25,6 +28,7 @@ public class Matatena : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+        shadowObj.transform.position = new Vector3(transform.position.x, 0, transform.position.z);
         if(transform.position.y <= 2)
             rigidBody.constraints = RigidbodyConstraints.FreezePositionY;
         if((transform.position.z > 18 || transform.position.z < -15) || (transform.position.x < -30 || transform.position.z > 25)){

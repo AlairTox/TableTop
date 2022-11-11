@@ -6,9 +6,16 @@ using UnityEngine;
 
 public class GameManager : MonoBehaviour
 {
+    [Header("Player")]
+    [SerializeField] GameObject[] prefabsPlayer;
+    
+    [Header("Game")]
     [SerializeField] [Range(0,5)] float gameSpeed;
     [SerializeField] int lifes;
-    [SerializeField] GameObject[] prefabsPlayer;
+
+    [Header("Music")]
+    [SerializeField] AudioClip gameMusic;
+    [SerializeField] [Range(0, 1)] float gameMusicVolume;
 
     Transform position;
     GameObject player, oldPlayer;
@@ -21,6 +28,7 @@ public class GameManager : MonoBehaviour
     {
         //Al inicio del juego se crea un peón
         player = Instantiate(prefabsPlayer[0], prefabsPlayer[0].transform.position, prefabsPlayer[0].transform.rotation);
+        //AudioSource.PlayClipAtPoint(gameMusic, Camera.main.transform.position, gameMusicVolume);
     }
 
     // Update is called once per frame
