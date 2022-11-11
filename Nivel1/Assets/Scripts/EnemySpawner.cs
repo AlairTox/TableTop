@@ -31,14 +31,14 @@ public class EnemySpawner : MonoBehaviour
         //Tiempo de espera entre que inicia el juego y empiezan a hacer spawn los enemigos
         yield return new WaitForSeconds(delayTime);
         //Inicio de spawn
-        StartCoroutine(SpawnParchis());
-        // StartCoroutine(SpawnDamas());
-        StartCoroutine(SpawnMatatena());
+        // StartCoroutine(SpawnParchis());
+        StartCoroutine(SpawnDamas());
+        // StartCoroutine(SpawnMatatena());
     }
     
     IEnumerator SpawnParchis(){
         //Tiempo de espera entre la aparición de Parchis
-        yield return new WaitForSeconds(3f);
+        yield return new WaitForSeconds(5f);
         //Obtención de una ubicación aleatoria dentro del campo de juego
         UnityEngine.Vector3 position = new UnityEngine.Vector3(Random.Range(-12, 12), 2f, Random.Range(-11, 22));
         CreateEnemy(enemyPrefabs[0], position);
@@ -48,12 +48,26 @@ public class EnemySpawner : MonoBehaviour
     
     IEnumerator SpawnDamas(){
         //Tiempo de espera entre la aparición de Damas
-        yield return new WaitForSeconds(4f);
+        yield return new WaitForSeconds(5f);
         //Obtención de una ubicación aleatoria dentro del campo de juego
-        UnityEngine.Vector3 position = new UnityEngine.Vector3(Random.Range(-12, 12), 0.2f, 22);
+        float random = Random.Range(-12, 22);
+        UnityEngine.Vector3 position = new UnityEngine.Vector3(random, 0.2f, 24);
         CreateEnemy(enemyPrefabs[1], position);
-        //Se espera medio segundo para generar la pareja
-        yield return new WaitForSeconds(0.5f);
+        position.x++;
+        //Se espera medio segundo para generar la segunda dama
+        // yield return new WaitForSeconds(0.5f);
+        CreateEnemy(enemyPrefabs[1], position);
+        position.x++;
+        //Se espera medio segundo para generar la tercera dama
+        // yield return new WaitForSeconds(0.5f);
+        CreateEnemy(enemyPrefabs[1], position);
+        position.x++;
+        //Se espera medio segundo para generar la cuarta dama
+        // yield return new WaitForSeconds(0.5f);
+        CreateEnemy(enemyPrefabs[1], position);
+        position.x++;
+        //Se espera medio segundo para generar la quinta dama
+        // yield return new WaitForSeconds(0.5f);
         CreateEnemy(enemyPrefabs[1], position);
         //Creación de Dama nuevamente
         StartCoroutine(SpawnDamas());

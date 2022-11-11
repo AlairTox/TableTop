@@ -20,7 +20,6 @@ public class Damas : MonoBehaviour
     void Start()
     {
         rigidBody = gameObject.GetComponent<Rigidbody>();
-        StartCoroutine(Jump());
     }
 
     // Update is called once per frame
@@ -32,7 +31,7 @@ public class Damas : MonoBehaviour
 
     private void Move(){
         //Movimiento hacia delante
-        rigidBody.velocity = new Vector3(0,0,-5);
+        rigidBody.velocity = new Vector3(0,0,-4);
     }
 
     public void processHit(int damage){
@@ -49,14 +48,8 @@ public class Damas : MonoBehaviour
 
     }
     void OnCollisionEnter(Collision collision){
-        processHit(damage);
+        if((collision.gameObject.layer == 8) || (collision.gameObject.layer == 6))
+            processHit(damage);
     }
 
-    IEnumerator Jump(){
-        //Tiempo de espera entre salto
-        yield return new WaitForSeconds(4f);
-        //Salto, impulso de 10 en Y y -5 en Z para que pueda rebasar a la pareja, regresa al suelo debido a la gravedad  
-        rigidBody.AddForce(0,10,-5, ForceMode.Impulse);
-        StartCoroutine(Jump());
-    }
 }
