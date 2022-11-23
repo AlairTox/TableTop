@@ -135,10 +135,11 @@ public class Player : MonoBehaviour
         //Si existe una colisión y el jugador ya no es invensible
         if(!isInvinsible){
             //Si la colisión ocurre con un enemigo(layer 7)
-            if(collision.gameObject.layer == 7)
+            if(collision.gameObject.layer == 7){
                 AudioSource.PlayClipAtPoint(hitSFX, Camera.main.transform.position, hitSFXVolume);
                 //Se le quita una vida al jugador
                 FindObjectOfType<GameManager>().processDeath();
+            }
         }
     }
 

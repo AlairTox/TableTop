@@ -31,8 +31,8 @@ public class EnemySpawner : MonoBehaviour
         //Tiempo de espera entre que inicia el juego y empiezan a hacer spawn los enemigos
         yield return new WaitForSeconds(delayTime);
         //Inicio de spawn
-        StartCoroutine(SpawnParchis());
-        StartCoroutine(SpawnDamas());
+        //StartCoroutine(SpawnParchis());
+        //StartCoroutine(SpawnDamas());
         StartCoroutine(SpawnMatatena());
     }
     
