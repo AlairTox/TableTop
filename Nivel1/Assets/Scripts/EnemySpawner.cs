@@ -23,7 +23,7 @@ public class EnemySpawner : MonoBehaviour
 
     void CreateEnemy(GameObject prefab, UnityEngine.Vector3 position){
         //Creación de un nuevo objeto(Enemigo)
-        GameObject newEnemy = Instantiate(prefab, position, Quaternion.identity);
+        GameObject newEnemy = Instantiate(prefab, position, prefab.transform.rotation);
     }
 
 

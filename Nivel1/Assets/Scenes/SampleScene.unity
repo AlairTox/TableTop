@@ -542,7 +542,7 @@ MonoBehaviour:
   gameSpeed: 1
   lifes: 100
   gameMusic: {fileID: 8300000, guid: ab69a987e3def6042b239cc6dd79a1bb, type: 3}
-  gameMusicVolume: 0.223
+  gameMusicVolume: 1
 --- !u!4 &1053487451
 Transform:
   m_ObjectHideFlags: 0
@@ -568,9 +568,9 @@ AudioSource:
   m_Enabled: 1
   serializedVersion: 4
   OutputAudioMixerGroup: {fileID: 0}
-  m_audioClip: {fileID: 8300000, guid: ab69a987e3def6042b239cc6dd79a1bb, type: 3}
+  m_audioClip: {fileID: 8300000, guid: e8fcaa4d9bfde6943a2094e7f5cc282a, type: 3}
   m_PlayOnAwake: 1
-  m_Volume: 0.02
+  m_Volume: 0.1
   m_Pitch: 1
   Loop: 1
   Mute: 0

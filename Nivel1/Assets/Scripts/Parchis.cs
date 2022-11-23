@@ -45,7 +45,7 @@ public class Parchis : MonoBehaviour
 
         // Create new combined speed vector
         // Perpendicular speed will always be the same
-        Vector3 orbitSpeed = perpendicular * 10;
+        Vector3 orbitSpeed = perpendicular * 7.5f;
 
         // If distance is too small it will never touch the character, thus have a hard minimum
         //UnityEngine.Debug.Log(distMag);

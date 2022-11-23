@@ -31,7 +31,7 @@ public class Damas : MonoBehaviour
 
     private void Move(){
         //Movimiento hacia delante
-        rigidBody.velocity = new Vector3(0,0,-4);
+        rigidBody.velocity = new Vector3(0,0,-5);
     }
 
     public void processHit(int damage){
