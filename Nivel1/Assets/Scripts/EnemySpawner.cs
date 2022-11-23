@@ -31,9 +31,9 @@ public class EnemySpawner : MonoBehaviour
         //Tiempo de espera entre que inicia el juego y empiezan a hacer spawn los enemigos
         yield return new WaitForSeconds(delayTime);
         //Inicio de spawn
-        // StartCoroutine(SpawnParchis());
+        StartCoroutine(SpawnParchis());
         StartCoroutine(SpawnDamas());
-        // StartCoroutine(SpawnMatatena());
+        StartCoroutine(SpawnMatatena());
     }
     
     IEnumerator SpawnParchis(){
@@ -55,19 +55,19 @@ public class EnemySpawner : MonoBehaviour
         CreateEnemy(enemyPrefabs[1], position);
         position.x++;
         //Se espera medio segundo para generar la segunda dama
-        // yield return new WaitForSeconds(0.5f);
+        yield return new WaitForSeconds(0.5f);
         CreateEnemy(enemyPrefabs[1], position);
         position.x++;
         //Se espera medio segundo para generar la tercera dama
-        // yield return new WaitForSeconds(0.5f);
+        yield return new WaitForSeconds(0.5f);
         CreateEnemy(enemyPrefabs[1], position);
         position.x++;
         //Se espera medio segundo para generar la cuarta dama
-        // yield return new WaitForSeconds(0.5f);
+        yield return new WaitForSeconds(0.5f);
         CreateEnemy(enemyPrefabs[1], position);
         position.x++;
         //Se espera medio segundo para generar la quinta dama
-        // yield return new WaitForSeconds(0.5f);
+        yield return new WaitForSeconds(0.5f);
         CreateEnemy(enemyPrefabs[1], position);
         //Creación de Dama nuevamente
         StartCoroutine(SpawnDamas());
