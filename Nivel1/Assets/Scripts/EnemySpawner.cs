@@ -31,8 +31,8 @@ public class EnemySpawner : MonoBehaviour
         //Tiempo de espera entre que inicia el juego y empiezan a hacer spawn los enemigos
         yield return new WaitForSeconds(delayTime);
         //Inicio de spawn
-        //StartCoroutine(SpawnParchis());
-        //StartCoroutine(SpawnDamas());
+        StartCoroutine(SpawnParchis());
+        StartCoroutine(SpawnDamas());
         StartCoroutine(SpawnMatatena());
     }
     
@@ -51,24 +51,24 @@ public class EnemySpawner : MonoBehaviour
         yield return new WaitForSeconds(5f);
         //Obtención de una ubicación aleatoria dentro del campo de juego
         float random = Random.Range(-12, 22);
-        UnityEngine.Vector3 position = new UnityEngine.Vector3(random, 0.2f, 24);
+        UnityEngine.Vector3 position = new UnityEngine.Vector3(random, 1.8f, 24);
         CreateEnemy(enemyPrefabs[1], position);
         position.x++;
         //Se espera medio segundo para generar la segunda dama
         yield return new WaitForSeconds(0.5f);
-        CreateEnemy(enemyPrefabs[1], position);
+        CreateEnemy(enemyPrefabs[2], position);
         position.x++;
         //Se espera medio segundo para generar la tercera dama
         yield return new WaitForSeconds(0.5f);
-        CreateEnemy(enemyPrefabs[1], position);
+        CreateEnemy(enemyPrefabs[3], position);
         position.x++;
         //Se espera medio segundo para generar la cuarta dama
         yield return new WaitForSeconds(0.5f);
-        CreateEnemy(enemyPrefabs[1], position);
+        CreateEnemy(enemyPrefabs[4], position);
         position.x++;
         //Se espera medio segundo para generar la quinta dama
         yield return new WaitForSeconds(0.5f);
-        CreateEnemy(enemyPrefabs[1], position);
+        CreateEnemy(enemyPrefabs[5], position);
         //Creación de Dama nuevamente
         StartCoroutine(SpawnDamas());
     }
@@ -78,7 +78,7 @@ public class EnemySpawner : MonoBehaviour
         yield return new WaitForSeconds(5f);
         //Obtención de una ubicación aleatoria dentro del campo de juego
         UnityEngine.Vector3 position = new Vector3(Random.Range(-12, 12), 30f, Random.Range(-11, 22));
-        CreateEnemy(enemyPrefabs[2], position);
+        CreateEnemy(enemyPrefabs[6], position);
         //Creación de Matatena nuevamente
         StartCoroutine(SpawnMatatena());
     }

@@ -6,6 +6,9 @@ public class Matatena : MonoBehaviour
 {
     [SerializeField] Sprite[] actualSprite;
     
+    [SerializeField] AudioClip deathSFX;
+    [SerializeField] [Range(0,1)] float deathSFXVolume;
+
     [Header("Prefabs")]
     [SerializeField] GameObject upgradePoint;
     [SerializeField] GameObject shadow;
@@ -38,6 +41,7 @@ public class Matatena : MonoBehaviour
         
     }
     public void processHit(){
+        AudioSource.PlayClipAtPoint(deathSFX, Camera.main.transform.position, deathSFXVolume);
          //Se obtine un número aleatorio entre  0 y 1
         random = Random.Range(0,2);
         if(random == 1)
