@@ -1,4 +1,6 @@
 
+using System.ComponentModel;
+using System.Timers;
 using System.Threading;
 using System.Net.Mime;
 using System;
@@ -19,6 +21,7 @@ public class GameManager : MonoBehaviour
     [SerializeField] Text scoreText; 
     [SerializeField] Text upgradeText;
     [SerializeField] Text lifesText;
+    [SerializeField] public int color;
 
     [Header("Music")]
     [SerializeField] AudioClip gameMusic;
@@ -47,19 +50,20 @@ public class GameManager : MonoBehaviour
             gameIsPaused = !gameIsPaused;
             PauseGame();
         }
-        
-        // if(pause){
-        //     if(Input.GetKeyDown(KeyCode.Escape))
-        //         Time.timeScale = gameSpeed;
-        //         pause = false;
-        // }
         scoreText.text = "\tScore: " + currentScore.ToString();
         upgradeText.text = "\tUpgradePoints: " + upgradePoints.ToString();
         lifesText.text = "\tHP: " + lifes.ToString();
+        
+        if(Input.GetKeyDown(KeyCode.Space))
+            changeColor();
+        
     }
 
     public void addToScore(int points){
         currentScore += points;
+    }
+    public int getColor(){
+        return color;
     }
 
     public void processDeath(){
@@ -79,7 +83,7 @@ public class GameManager : MonoBehaviour
         lifes--;
         if(lifes == 0){
             //Game Over
-            gameSpeed = 0;
+            Time.timeScale = 0f;
             Destroy(player);
         }
     }
@@ -104,15 +108,16 @@ public class GameManager : MonoBehaviour
             }
         }
     }
-    void PauseGame ()
-    {
+    void PauseGame (){
         if(gameIsPaused)
-        {
             Time.timeScale = 0f;
-        }
         else 
-        {
             Time.timeScale = gameSpeed;
-        }
+    }
+    void changeColor(){
+        if(color == 0)
+            color = 1;
+        else 
+            color = 0;
     }
 }

@@ -688,6 +688,7 @@ MonoBehaviour:
   scoreText: {fileID: 324811059}
   upgradeText: {fileID: 2024267449}
   lifesText: {fileID: 1426933171}
+  color: 1
   gameMusic: {fileID: 8300000, guid: ab69a987e3def6042b239cc6dd79a1bb, type: 3}
   gameMusicVolume: 1
   upgradePoints: 0

@@ -27,6 +27,7 @@ public class Player : MonoBehaviour
     [SerializeField] AudioClip hitSFX;
     [SerializeField] [Range(0, 1)] float hitSFXVolume;
 
+    int color;
     Animator animator;
     FireSpark FireSpark;
     Rigidbody rigidBody;
@@ -54,6 +55,7 @@ public class Player : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+        color = FindObjectOfType<GameManager>().getColor(); 
         Move();
         Fire();
         changeSprite();
@@ -109,25 +111,51 @@ public class Player : MonoBehaviour
         UnityEngine.Vector3 direction = positionOnScreen - mouseOnScreen;
         float ang = Mathf.Atan2(direction.y, direction.x) * Mathf.Rad2Deg;
         //Si el jugador mira hacia atras
-        if(ang < -45 && ang >= -135){
-           sprite.sprite = newSprite[3];
-            //Se coloca el return debido a que una vez cambiado el sprite la función debe terminar, al ser llamada desde update evita problemas de sobreposición
-            return;
-        }
-        //Si el jugador mira hacia delante
-        if(ang > 45 && ang <= 135){
-            sprite.sprite = newSprite[1];
-            return;
-        }        
-        //Si el jugador mira hacia la derecha
-        if(ang > 135 || ang < -135){
-            sprite.sprite = newSprite[0];
-            return;
-        }
-        //Si el jugador mira hacia la izquierda
-        if(ang > -45 && ang <= 45){
-            sprite.sprite = newSprite[2];
-            return;
+        switch(color){
+            case 0:
+                if(ang < -45 && ang >= -135){
+                sprite.sprite = newSprite[3];
+                    //Se coloca el return debido a que una vez cambiado el sprite la función debe terminar, al ser llamada desde update evita problemas de sobreposición
+                    return;
+                }
+                //Si el jugador mira hacia delante
+                if(ang > 45 && ang <= 135){
+                    sprite.sprite = newSprite[1];
+                    return;
+                }        
+                //Si el jugador mira hacia la derecha
+                if(ang > 135 || ang < -135){
+                    sprite.sprite = newSprite[0];
+                    return;
+                }
+                //Si el jugador mira hacia la izquierda
+                if(ang > -45 && ang <= 45){
+                    sprite.sprite = newSprite[2];
+                    return;
+                }
+            break;
+            case 1:
+                if(ang < -45 && ang >= -135){
+                sprite.sprite = newSprite[7];
+                    //Se coloca el return debido a que una vez cambiado el sprite la función debe terminar, al ser llamada desde update evita problemas de sobreposición
+                    return;
+                }
+                //Si el jugador mira hacia delante
+                if(ang > 45 && ang <= 135){
+                    sprite.sprite = newSprite[5];
+                    return;
+                }        
+                //Si el jugador mira hacia la derecha
+                if(ang > 135 || ang < -135){
+                    sprite.sprite = newSprite[4];
+                    return;
+                }
+                //Si el jugador mira hacia la izquierda
+                if(ang > -45 && ang <= 45){
+                    sprite.sprite = newSprite[6];
+                    return;
+                }
+            break;
         }
     }
 
@@ -162,32 +190,66 @@ public class Player : MonoBehaviour
         float ang = Mathf.Atan2(direction.y, direction.x) * Mathf.Rad2Deg;
         //Se activa el componente Animator
         animator.enabled = true;
-        //Si el jugador mira hacia atras
-        if(ang < -45 && ang >= -135){
-            //Activación de animación a 0.25 de velcoidad
-            animator.Play("Base Layer.SmallBack", 0, 0.25f);
-            //Se deja la animación correr por medio segundo
-            yield return new WaitForSeconds(0.5f);
-            //Se desactiva el componente Animator
-            animator.enabled = false;
-        }
-        //Si el jugador mira hacia delante
-        if(ang > 45 && ang <= 135){
-            animator.Play("Base Layer.SmallFront", 0, 0.25f);
-            yield return new WaitForSeconds(0.5f);
-            animator.enabled = false;
-        }        
-        //Si el jugador mira hacia la derecha
-        if(ang > 135 || ang < -135){
-            animator.Play("Base Layer.SmallRight", 0, 0.25f);
-            yield return new WaitForSeconds(0.5f);
-            animator.enabled = false;
-        }
-        //Si el jugador mira hacia la izquierda
-        if(ang > -45 && ang <= 45){
-            animator.Play("Base Layer.SmallLeft", 0, 0.25f);
-            yield return new WaitForSeconds(0.5f);
-            animator.enabled = false;
+        switch(color){
+            case 0:
+                //Si el jugador mira hacia atras
+                if(ang < -45 && ang >= -135){
+                    //Activación de animación a 0.25 de velcoidad
+                    animator.Play("Base Layer.SmallBackWhite", 0, 0.25f);
+                    //Se deja la animación correr por medio segundo
+                    yield return new WaitForSeconds(0.5f);
+                    //Se desactiva el componente Animator
+                    animator.enabled = false;
+                }
+                //Si el jugador mira hacia delante
+                if(ang > 45 && ang <= 135){
+                    animator.Play("Base Layer.SmallFrontWhite", 0, 0.25f);
+                    yield return new WaitForSeconds(0.5f);
+                    animator.enabled = false;
+                }        
+                //Si el jugador mira hacia la derecha
+                if(ang > 135 || ang < -135){
+                    animator.Play("Base Layer.SmallRightWhite", 0, 0.25f);
+                    yield return new WaitForSeconds(0.5f);
+                    animator.enabled = false;
+                }
+                //Si el jugador mira hacia la izquierda
+                if(ang > -45 && ang <= 45){
+                    animator.Play("Base Layer.SmallLeftWhite", 0, 0.25f);
+                    yield return new WaitForSeconds(0.5f);
+                    animator.enabled = false;
+                }
+            break;
+            case 1:
+                //Si el jugador mira hacia atras
+                if(ang < -45 && ang >= -135){
+                    //Activación de animación a 0.25 de velcoidad
+                    animator.Play("Base Layer.SmallBackBlack", 0, 0.25f);
+                    //Se deja la animación correr por medio segundo
+                    yield return new WaitForSeconds(0.5f);
+                    //Se desactiva el componente Animator
+                    animator.enabled = false;
+                }
+                //Si el jugador mira hacia delante
+                if(ang > 45 && ang <= 135){
+                    animator.Play("Base Layer.SmallFrontBlack", 0, 0.25f);
+                    yield return new WaitForSeconds(0.5f);
+                    animator.enabled = false;
+                }        
+                //Si el jugador mira hacia la derecha
+                if(ang > 135 || ang < -135){
+                    animator.Play("Base Layer.SmallRightBlack", 0, 0.25f);
+                    yield return new WaitForSeconds(0.5f);
+                    animator.enabled = false;
+                }
+                //Si el jugador mira hacia la izquierda
+                if(ang > -45 && ang <= 45){
+                    animator.Play("Base Layer.SmallLeftBlack", 0, 0.25f);
+                    yield return new WaitForSeconds(0.5f);
+                    animator.enabled = false;
+                }
+            
+            break;
         }
     }
 }

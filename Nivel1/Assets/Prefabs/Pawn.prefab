@@ -142,6 +142,10 @@ MonoBehaviour:
   - {fileID: -366179977, guid: 26af5fca21f5de4408f5c33313ba5f23, type: 3}
   - {fileID: -753917195, guid: 26af5fca21f5de4408f5c33313ba5f23, type: 3}
   - {fileID: 91944497, guid: 26af5fca21f5de4408f5c33313ba5f23, type: 3}
+  - {fileID: -1966451761, guid: 26af5fca21f5de4408f5c33313ba5f23, type: 3}
+  - {fileID: -335213369, guid: 26af5fca21f5de4408f5c33313ba5f23, type: 3}
+  - {fileID: 310752678, guid: 26af5fca21f5de4408f5c33313ba5f23, type: 3}
+  - {fileID: 926502836, guid: 26af5fca21f5de4408f5c33313ba5f23, type: 3}
   fireRate: 0.25
   projectilePrefab: {fileID: 1132424580817164973, guid: 10d68e912a89820458a94ef8961cbc87,
     type: 3}
