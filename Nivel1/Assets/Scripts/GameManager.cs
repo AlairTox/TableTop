@@ -1,8 +1,12 @@
 
+using System.Threading;
+using System.Net.Mime;
 using System;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
+
 
 public class GameManager : MonoBehaviour
 {
@@ -11,34 +15,47 @@ public class GameManager : MonoBehaviour
     
     [Header("Game")]
     [SerializeField] [Range(0,5)] float gameSpeed;
-    [SerializeField] int lifes;
+    [SerializeField] public int lifes;
+    [SerializeField] Text scoreText; 
+    [SerializeField] Text upgradeText;
+    [SerializeField] Text lifesText;
 
     [Header("Music")]
     [SerializeField] AudioClip gameMusic;
     [SerializeField] [Range(0, 1)] float gameMusicVolume;
 
     Transform position;
+    Boolean gameIsPaused;
     GameObject player, oldPlayer;
     int upgradeLevel = 0;
-    int upgradePoints = 0;
-    int currentScore;
-    int points;
+    public int upgradePoints = 0;
+    public int currentScore;
     // Start is called before the first frame update
     void Start()
     {
+        upgradeText.fontSize = scoreText.fontSize = lifesText.fontSize = 28;
         //Al inicio del juego se crea un peón
         player = Instantiate(prefabsPlayer[0], prefabsPlayer[0].transform.position, prefabsPlayer[0].transform.rotation);
+        Time.timeScale  = gameSpeed;
         //AudioSource.PlayClipAtPoint(gameMusic, Camera.main.transform.position, gameMusicVolume);
     }
 
     // Update is called once per frame
     void Update()
     {
-        Time.timeScale  = gameSpeed;
-    }
-
-    public int getScore(){
-        return currentScore;
+        if(Input.GetKeyDown(KeyCode.Escape)){
+            gameIsPaused = !gameIsPaused;
+            PauseGame();
+        }
+        
+        // if(pause){
+        //     if(Input.GetKeyDown(KeyCode.Escape))
+        //         Time.timeScale = gameSpeed;
+        //         pause = false;
+        // }
+        scoreText.text = "\tScore: " + currentScore.ToString();
+        upgradeText.text = "\tUpgradePoints: " + upgradePoints.ToString();
+        lifesText.text = "\tHP: " + lifes.ToString();
     }
 
     public void addToScore(int points){
@@ -85,6 +102,17 @@ public class GameManager : MonoBehaviour
                 //Se crea el nuevo prefab con el upgrade realizado
                 player = Instantiate(prefabsPlayer[upgradeLevel], position.position, prefabsPlayer[upgradeLevel].transform.rotation);
             }
+        }
+    }
+    void PauseGame ()
+    {
+        if(gameIsPaused)
+        {
+            Time.timeScale = 0f;
+        }
+        else 
+        {
+            Time.timeScale = gameSpeed;
         }
     }
 }

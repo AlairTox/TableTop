@@ -70,6 +70,7 @@ public class Parchis : MonoBehaviour
             if(random == 1)
                 //Si el número obtenido es 1 se crea un objeto de tipo upgreadePoint
                 Instantiate(upgradePoint, transform.position, upgradePoint.transform.rotation);
+            FindObjectOfType<GameManager>().addToScore(100);
             //Se destruye al enemigo
             Destroy(gameObject);
         }

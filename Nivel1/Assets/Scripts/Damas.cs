@@ -51,6 +51,7 @@ public class Damas : MonoBehaviour
                 //Si el número obtenido es 1 se crea un objeto de tipo upgradePoint
                 Instantiate(upgradePoint, transform.position, upgradePoint.transform.rotation);
             //Se destruye al enemigo(ya no tiene vida)
+            FindObjectOfType<GameManager>().addToScore(100);
             Destroy(gameObject);
         }
 

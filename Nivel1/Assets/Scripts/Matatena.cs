@@ -32,8 +32,9 @@ public class Matatena : MonoBehaviour
     void Update()
     {
         shadowObj.transform.position = new Vector3(transform.position.x, 0, transform.position.z);
-        if(transform.position.y <= 2)
+        if(transform.position.y <= 2){
             rigidBody.constraints = RigidbodyConstraints.FreezePositionY;
+        }
         if((transform.position.z > 18 || transform.position.z < -15) || (transform.position.x < -30 || transform.position.z > 25)){
             Destroy(shadowObj);
             Destroy(gameObject);
@@ -47,10 +48,12 @@ public class Matatena : MonoBehaviour
         if(random == 1)
             //Si el número obtenido es 1 se crea un objeto de tipo upgreadePoint
             Instantiate(upgradePoint, transform.position, upgradePoint.transform.rotation);
+        FindObjectOfType<GameManager>().addToScore(100);
         //Se destruye al enemigo
         Destroy(shadowObj);
         Destroy(gameObject);
         }
+
     void OnCollisionEnter(Collision collision){
         if((collision.gameObject.layer == 8) || (collision.gameObject.layer == 6))
             processHit();
