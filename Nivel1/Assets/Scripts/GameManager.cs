@@ -33,9 +33,14 @@ public class GameManager : MonoBehaviour
     int upgradeLevel = 0;
     public int upgradePoints = 0;
     public int currentScore;
+
+    Vector3 rotationVector = new Vector3(0, -90, -45);
+    Vector3 rotationVectorFinish = new Vector3(45, 0, 0);
+    Quaternion rotationInit;
     // Start is called before the first frame update
     void Start()
     {
+        rotationInit = Quaternion.Euler(rotationVector);
         upgradeText.fontSize = scoreText.fontSize = lifesText.fontSize = 28;
         //Al inicio del juego se crea un peón
         player = Instantiate(prefabsPlayer[0], prefabsPlayer[0].transform.position, prefabsPlayer[0].transform.rotation);
@@ -51,7 +56,7 @@ public class GameManager : MonoBehaviour
             PauseGame();
         }
         scoreText.text = "\tScore: " + currentScore.ToString();
-        upgradeText.text = "\tUpgradePoints: " + upgradePoints.ToString();
+        upgradeText.text = "UpgradePoints: " + upgradePoints.ToString();
         lifesText.text = "\tHP: " + lifes.ToString();
         
         if(Input.GetKeyDown(KeyCode.Space))
@@ -78,7 +83,8 @@ public class GameManager : MonoBehaviour
             upgradeLevel++;
         //Se destruye el jugador actual para crear inmediatamente uno nuevo con las características actualizadas
         Destroy(player);
-        player = Instantiate(prefabsPlayer[upgradeLevel], position.position, prefabsPlayer[upgradeLevel].transform.rotation);
+        player = Instantiate(prefabsPlayer[upgradeLevel], position.position, prefabsPlayer[upgradeLevel].transform.position);
+        //StartCoroutine(changeRotation());
         //Se resta una vida al jugador
         lifes--;
         if(lifes == 0){
@@ -104,7 +110,8 @@ public class GameManager : MonoBehaviour
                 //Se destruye el prefab anterior
                 Destroy(player);
                 //Se crea el nuevo prefab con el upgrade realizado
-                player = Instantiate(prefabsPlayer[upgradeLevel], position.position, prefabsPlayer[upgradeLevel].transform.rotation);
+                player = Instantiate(prefabsPlayer[upgradeLevel], position.position, prefabsPlayer[upgradeLevel.transform.position]);
+                //StartCoroutine(changeRotation());
             }
         }
     }
@@ -120,4 +127,11 @@ public class GameManager : MonoBehaviour
         else 
             color = 0;
     }
+
+    // IEnumerator changeRotation(){
+    //     yield return new WaitForSeconds(0.2f);
+    //     Quaternion finishRotation = Quaternion.Euler(rotationVectorFinish);
+    //     player.transform.rotation = Quaternion.Slerp(player.transform.rotation, finishRotation,  Time.deltaTime * 0.5f);
+
+    // }
 }

@@ -132,10 +132,10 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   moveSpeed: 3
-  minX: -100
-  minZ: -100
-  maxX: 100
-  maxZ: 100
+  minX: -50
+  minZ: -50
+  maxX: 50
+  maxZ: 50
   padding: 2
   newSprite:
   - {fileID: -2014296964, guid: 107c7260b9d1e6141acb5af00c95216c, type: 3}
