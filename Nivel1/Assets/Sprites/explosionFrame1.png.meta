@@ -1,5 +1,5 @@
 fileFormatVersion: 2
-guid: 5ea6a73ac87447f44a5d85e76fb9f261
+guid: ea3843226c83b504da3e89052b26a8b5
 TextureImporter:
   internalIDToNameTable: []
   externalObjects: {}
@@ -116,13 +116,13 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: upgradePoints_0
+      name: explosionFrame1_0
       rect:
         serializedVersion: 2
-        x: 30
-        y: 37
-        width: 97
-        height: 154
+        x: 0
+        y: 457
+        width: 395.33334
+        height: 457
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -130,20 +130,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: a2eaa6d41c042d046892a6c213a51830
-      internalID: -1113483204
+      spriteID: 42122a945dc0649469760778402a5891
+      internalID: 1298324955
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: upgradePoints_1
+      name: explosionFrame1_1
       rect:
         serializedVersion: 2
-        x: 156
-        y: 37
-        width: 97
-        height: 154
+        x: 395
+        y: 457
+        width: 395.33334
+        height: 457
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -151,8 +151,92 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 5302a281b8334214f9e6c1652eb25f2d
-      internalID: 1992310123
+      spriteID: 5db961a0a7c1bea4cac6b98dbf021714
+      internalID: 1311815516
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: explosionFrame1_2
+      rect:
+        serializedVersion: 2
+        x: 790
+        y: 457
+        width: 395.33334
+        height: 457
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 7d522ec12537ea34e9d16cd6ce02de26
+      internalID: -505806381
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: explosionFrame1_3
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 0
+        width: 395.33334
+        height: 457
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 006e9b1935164e5419eac9149e951d0b
+      internalID: 1186290183
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: explosionFrame1_4
+      rect:
+        serializedVersion: 2
+        x: 395
+        y: 0
+        width: 395.33334
+        height: 457
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a3220e672badd734996cd6dd76260efd
+      internalID: 126022882
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: explosionFrame1_5
+      rect:
+        serializedVersion: 2
+        x: 790
+        y: 0
+        width: 395.33334
+        height: 457
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ebec2569cf349d64b8b3ae871f8f893f
+      internalID: 1541619508
       vertices: []
       indices: 
       edges: []
@@ -168,8 +252,12 @@ TextureImporter:
     weights: []
     secondaryTextures: []
     nameFileIdTable:
-      upgradePoints_0: -1113483204
-      upgradePoints_1: 1992310123
+      explosionFrame1_4: 126022882
+      explosionFrame1_0: 1298324955
+      explosionFrame1_1: 1311815516
+      explosionFrame1_5: 1541619508
+      explosionFrame1_3: 1186290183
+      explosionFrame1_2: -505806381
   spritePackingTag: 
   pSDRemoveMatte: 0
   pSDShowRemoveMatteOption: 0
