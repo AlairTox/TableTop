@@ -83,7 +83,7 @@ public class GameManager : MonoBehaviour
             upgradeLevel++;
         //Se destruye el jugador actual para crear inmediatamente uno nuevo con las características actualizadas
         Destroy(player);
-        player = Instantiate(prefabsPlayer[upgradeLevel], position.position, prefabsPlayer[upgradeLevel].transform.position);
+        player = Instantiate(prefabsPlayer[upgradeLevel], position.position, prefabsPlayer[upgradeLevel].transform.rotation);
         //StartCoroutine(changeRotation());
         //Se resta una vida al jugador
         lifes--;
@@ -110,7 +110,7 @@ public class GameManager : MonoBehaviour
                 //Se destruye el prefab anterior
                 Destroy(player);
                 //Se crea el nuevo prefab con el upgrade realizado
-                player = Instantiate(prefabsPlayer[upgradeLevel], position.position, prefabsPlayer[upgradeLevel.transform.position]);
+                player = Instantiate(prefabsPlayer[upgradeLevel], position.position, prefabsPlayer[upgradeLevel].transform.rotation);
                 //StartCoroutine(changeRotation());
             }
         }
