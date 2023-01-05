@@ -1,5 +1,5 @@
 fileFormatVersion: 2
-guid: 7842869cacebb3e419c47ce45ffe78ab
+guid: 54272f9b51beeaa4481f057fe58b12ff
 TextureImporter:
   internalIDToNameTable: []
   externalObjects: {}
@@ -101,18 +101,6 @@ TextureImporter:
     androidETC2FallbackOverride: 0
     forceMaximumCompressionQuality_BC6H_BC7: 0
   - serializedVersion: 3
-    buildTarget: Android
-    maxTextureSize: 2048
-    resizeAlgorithm: 0
-    textureFormat: -1
-    textureCompression: 1
-    compressionQuality: 50
-    crunchedCompression: 0
-    allowsAlphaSplitting: 0
-    overridden: 0
-    androidETC2FallbackOverride: 0
-    forceMaximumCompressionQuality_BC6H_BC7: 0
-  - serializedVersion: 3
     buildTarget: WebGL
     maxTextureSize: 2048
     resizeAlgorithm: 0
@@ -128,97 +116,13 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: alfil l_0
-      rect:
-        serializedVersion: 2
-        x: 0
-        y: 924
-        width: 428.75
-        height: 924
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 8d4e10f116663c840a790d8f143b6a68
-      internalID: -1736666528
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: alfil l_1
-      rect:
-        serializedVersion: 2
-        x: 428
-        y: 924
-        width: 428.75
-        height: 924
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: ee56e0f97d234f2458598a7296baf3f2
-      internalID: -344238271
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: alfil l_2
-      rect:
-        serializedVersion: 2
-        x: 856
-        y: 924
-        width: 428.75
-        height: 924
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 6b5141533c04732429f3756472a460a9
-      internalID: 1412507880
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: alfil l_3
-      rect:
-        serializedVersion: 2
-        x: 1284
-        y: 924
-        width: 428.75
-        height: 924
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 485257a5fb8f1b94c953a7115ac77654
-      internalID: -1638747566
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: alfil l_4
+      name: lifePointsSmall_0
       rect:
         serializedVersion: 2
         x: 0
         y: 0
-        width: 428.75
-        height: 924
+        width: 43
+        height: 102
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -226,20 +130,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 51ac588858a83d04e8f1dd2f272eccf3
-      internalID: 1692568688
+      spriteID: 7a3e8b8e235e2c240807cd8907e343e6
+      internalID: -41547967
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: alfil l_5
+      name: lifePointsSmall_1
       rect:
         serializedVersion: 2
-        x: 428
+        x: 44
         y: 0
-        width: 428.75
-        height: 924
+        width: 50
+        height: 102
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -247,20 +151,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 0cfb140ee3b95ae48a39132521d35a6b
-      internalID: 116227812
+      spriteID: 227bb56ad8766684b91b40efbd1d1af0
+      internalID: 1404116811
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: alfil l_6
+      name: lifePointsSmall_2
       rect:
         serializedVersion: 2
-        x: 856
+        x: 93
         y: 0
-        width: 428.75
-        height: 924
+        width: 52
+        height: 102
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -268,20 +172,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: f7122e178d1261e4495afc4d9217fe73
-      internalID: -889088170
+      spriteID: 325931f379e7fc54ba28c008a6c5b556
+      internalID: 510713877
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: alfil l_7
+      name: lifePointsSmall_3
       rect:
         serializedVersion: 2
-        x: 1284
+        x: 146
         y: 0
-        width: 428.75
-        height: 924
+        width: 49
+        height: 102
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -289,8 +193,29 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 39c4608dd3693d64eb92c3e30268cc3c
-      internalID: -1927395348
+      spriteID: 3ae4e27e862271149826ad568f330217
+      internalID: 2035740698
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: lifePointsSmall_4
+      rect:
+        serializedVersion: 2
+        x: 195
+        y: 0
+        width: 50
+        height: 102
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: caa93161d9acf474aa3000c6db0fe174
+      internalID: -1051456538
       vertices: []
       indices: 
       edges: []
@@ -298,7 +223,7 @@ TextureImporter:
     outline: []
     physicsShape: []
     bones: []
-    spriteID: b1fc80dbc545a304294bd157f82561aa
+    spriteID: a7a5a34bf5c6f0f4bb8c2aac3c0344e0
     internalID: 0
     vertices: []
     indices: 
@@ -306,14 +231,11 @@ TextureImporter:
     weights: []
     secondaryTextures: []
     nameFileIdTable:
-      alfil l_4: 1692568688
-      alfil l_5: 116227812
-      alfil l_2: 1412507880
-      alfil l_0: -1736666528
-      alfil l_1: -344238271
-      alfil l_7: -1927395348
-      alfil l_3: -1638747566
-      alfil l_6: -889088170
+      lifePointsSmall_4: -1051456538
+      lifePointsSmall_2: 510713877
+      lifePointsSmall_1: 1404116811
+      lifePointsSmall_0: -41547967
+      lifePointsSmall_3: 2035740698
   spritePackingTag: 
   pSDRemoveMatte: 0
   pSDShowRemoveMatteOption: 0
