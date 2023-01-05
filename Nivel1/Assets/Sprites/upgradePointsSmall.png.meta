@@ -1,5 +1,5 @@
 fileFormatVersion: 2
-guid: 5ea6a73ac87447f44a5d85e76fb9f261
+guid: 757abf8ffe20e214c9e2389f8fad0abf
 TextureImporter:
   internalIDToNameTable: []
   externalObjects: {}
@@ -116,13 +116,13 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: upgradePoints_0
+      name: upgradePointsSmall_0
       rect:
         serializedVersion: 2
-        x: 30
-        y: 37
-        width: 97
-        height: 154
+        x: 14
+        y: 17
+        width: 44
+        height: 71
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -130,20 +130,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: a2eaa6d41c042d046892a6c213a51830
-      internalID: -1113483204
+      spriteID: 2d560230253fc8648b2118a4f1e759bf
+      internalID: 706717375
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: upgradePoints_1
+      name: upgradePointsSmall_1
       rect:
         serializedVersion: 2
-        x: 156
-        y: 37
-        width: 97
-        height: 154
+        x: 72
+        y: 17
+        width: 44
+        height: 71
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -151,8 +151,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 5302a281b8334214f9e6c1652eb25f2d
-      internalID: 1992310123
+      spriteID: 65cfd6737fdbc414d8991ffd9bdc69bb
+      internalID: 1036355329
       vertices: []
       indices: 
       edges: []
@@ -160,7 +160,7 @@ TextureImporter:
     outline: []
     physicsShape: []
     bones: []
-    spriteID: 5e97eb03825dee720800000000000000
+    spriteID: d19343528a9cafa44b7ac5dadb7365da
     internalID: 0
     vertices: []
     indices: 
@@ -168,8 +168,8 @@ TextureImporter:
     weights: []
     secondaryTextures: []
     nameFileIdTable:
-      upgradePoints_0: -1113483204
-      upgradePoints_1: 1992310123
+      upgradePointsSmall_0: 706717375
+      upgradePointsSmall_1: 1036355329
   spritePackingTag: 
   pSDRemoveMatte: 0
   pSDShowRemoveMatteOption: 0

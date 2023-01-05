@@ -1,5 +1,5 @@
 fileFormatVersion: 2
-guid: b27175b7004fe024f983db808bda961d
+guid: a69b4dccae0c0e9419f12cec2871778a
 TextureImporter:
   internalIDToNameTable: []
   externalObjects: {}
@@ -44,7 +44,7 @@ TextureImporter:
   compressionQuality: 50
   spriteMode: 2
   spriteExtrude: 1
-  spriteMeshType: 1
+  spriteMeshType: 0
   alignment: 0
   spritePivot: {x: 0.5, y: 0.5}
   spritePixelsToUnits: 100
@@ -101,18 +101,6 @@ TextureImporter:
     androidETC2FallbackOverride: 0
     forceMaximumCompressionQuality_BC6H_BC7: 0
   - serializedVersion: 3
-    buildTarget: Android
-    maxTextureSize: 2048
-    resizeAlgorithm: 0
-    textureFormat: -1
-    textureCompression: 1
-    compressionQuality: 50
-    crunchedCompression: 0
-    allowsAlphaSplitting: 0
-    overridden: 0
-    androidETC2FallbackOverride: 0
-    forceMaximumCompressionQuality_BC6H_BC7: 0
-  - serializedVersion: 3
     buildTarget: WebGL
     maxTextureSize: 2048
     resizeAlgorithm: 0
@@ -128,169 +116,85 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: BishopTall_0
+      name: explosionFrames_3
       rect:
         serializedVersion: 2
-        x: 0
-        y: 924
-        width: 428.75
-        height: 924
+        x: 455
+        y: 0
+        width: 455
+        height: 564
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 72aca98dc2811fa49bf4a51e01a088c3
-      internalID: 1485812794
+      spriteID: e204357580256e946b7c47629b350aed
+      internalID: 1167351049
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: BishopTall_1
+      name: explosionFrames_4
       rect:
         serializedVersion: 2
-        x: 428
-        y: 924
-        width: 428.75
-        height: 924
+        x: 910
+        y: 0
+        width: 455
+        height: 564
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: e3fa5bacd95423541ab4fed4f2df872a
-      internalID: -1315497751
+      spriteID: 2ae90d77024911f4fb0f1f64e34e5c63
+      internalID: 830849207
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: BishopTall_2
-      rect:
-        serializedVersion: 2
-        x: 856
-        y: 924
-        width: 428.75
-        height: 924
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: d8930ee6ac3f0ce44add58d7576f89b6
-      internalID: 1858783282
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: BishopTall_3
-      rect:
-        serializedVersion: 2
-        x: 1284
-        y: 924
-        width: 428.75
-        height: 924
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 8a4e5760422106b4080808ec0538c7c5
-      internalID: 9697884
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: BishopTall_4
+      name: explosionFrames_2
       rect:
         serializedVersion: 2
         x: 0
         y: 0
-        width: 428.75
-        height: 924
+        width: 455
+        height: 564
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: cdc69bbba7f266547960e06a72959c85
-      internalID: -109307502
+      spriteID: 49a3d71d2443c754b8b17ec19ffeab7e
+      internalID: 1180701880
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: BishopTall_5
+      name: explosionFrames_5
       rect:
         serializedVersion: 2
-        x: 428
+        x: 1365
         y: 0
-        width: 428.75
-        height: 924
+        width: 455
+        height: 564
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 33c32bb63bba1264399040d6f894fc6a
-      internalID: -2083002860
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: BishopTall_6
-      rect:
-        serializedVersion: 2
-        x: 856
-        y: 0
-        width: 428.75
-        height: 924
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 1c4c9e2ea0e6b5143997c8d2a8e100ac
-      internalID: 970613346
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: BishopTall_7
-      rect:
-        serializedVersion: 2
-        x: 1284
-        y: 0
-        width: 428.75
-        height: 924
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 9f028fd92549e47448019ccdea705867
-      internalID: -1907637523
+      spriteID: 5ca9bda026308d14d9d4aceef1a00ba5
+      internalID: -729498163
       vertices: []
       indices: 
       edges: []
@@ -298,7 +202,7 @@ TextureImporter:
     outline: []
     physicsShape: []
     bones: []
-    spriteID: 5677ede4ffce65f4a8b4bcaf347d9514
+    spriteID: 1f19f48e787845b48bcc7c20fc06de6a
     internalID: 0
     vertices: []
     indices: 
@@ -306,14 +210,15 @@ TextureImporter:
     weights: []
     secondaryTextures: []
     nameFileIdTable:
-      BishopTall_0: 1485812794
-      BishopTall_7: -1907637523
-      BishopTall_1: -1315497751
-      BishopTall_2: 1858783282
-      BishopTall_5: -2083002860
-      BishopTall_4: -109307502
-      BishopTall_6: 970613346
-      BishopTall_3: 9697884
+      explosionFrames_7: 357773869
+      explosionFrames_3: 1167351049
+      explosionFrames_10: -887343410
+      explosionFrames_6: -2145952544
+      explosionFrames_1: 84354080
+      explosionFrames_8: 1036541200
+      explosionFrames_2: 1180701880
+      explosionFrames_5: -729498163
+      explosionFrames_4: 830849207
   spritePackingTag: 
   pSDRemoveMatte: 0
   pSDShowRemoveMatteOption: 0
