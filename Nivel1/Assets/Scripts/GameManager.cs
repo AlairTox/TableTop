@@ -37,11 +37,14 @@ public class GameManager : MonoBehaviour
     Vector3 rotationVector = new Vector3(0, -90, -45);
     Vector3 rotationVectorFinish = new Vector3(45, 0, 0);
     Quaternion rotationInit;
+    float fov = 50.0f;
     // Start is called before the first frame update
     void Start()
     {
+        StartCoroutine(changeFOV());
+
         rotationInit = Quaternion.Euler(rotationVector);
-        upgradeText.fontSize = scoreText.fontSize = lifesText.fontSize = 28;
+        upgradeText.fontSize = scoreText.fontSize = lifesText.fontSize = 48;
         //Al inicio del juego se crea un peón
         player = Instantiate(prefabsPlayer[0], prefabsPlayer[0].transform.position, prefabsPlayer[0].transform.rotation);
         Time.timeScale  = gameSpeed;
@@ -55,8 +58,8 @@ public class GameManager : MonoBehaviour
             gameIsPaused = !gameIsPaused;
             PauseGame();
         }
-        scoreText.text = "\tScore: " + currentScore.ToString();
-        upgradeText.text = "UpgradePoints: " + upgradePoints.ToString();
+        scoreText.text = "\t" + currentScore.ToString();
+        upgradeText.text = upgradePoints.ToString();
         lifesText.text = "\tHP: " + lifes.ToString();
         
         if(Input.GetKeyDown(KeyCode.Space))
@@ -126,6 +129,13 @@ public class GameManager : MonoBehaviour
             color = 1;
         else 
             color = 0;
+    }
+    IEnumerator changeFOV(){
+        yield return new WaitForSeconds(0.01f);
+        if(fov != Camera.main.fieldOfView){
+            Camera.main.fieldOfView--;
+            StartCoroutine(changeFOV());
+        }
     }
 
     // IEnumerator changeRotation(){

@@ -1,5 +1,6 @@
 fileFormatVersion: 2
-guid: abf0b8b1c5915b640bb8c811e16f6e9d
+
+guid: 03f900ba2055e5b439a835490ef449c7
 TrueTypeFontImporter:
   externalObjects: {}
   serializedVersion: 4
@@ -10,8 +11,7 @@ TrueTypeFontImporter:
   includeFontData: 1
   fontNames:
   - Origami Mommy
-  fallbackFontReferences:
-  - {fileID: 12800000, guid: f868a3b5582c5b14f8f5b02f8e55c88d, type: 3}
+  fallbackFontReferences: []
   customCharacters: 
   fontRenderingMode: 0
   ascentCalculationMode: 1
