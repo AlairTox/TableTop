@@ -82,7 +82,7 @@ MonoBehaviour:
   actualSprite:
   - {fileID: 1768740279, guid: 226045b2676a37f438b64c46a362e5dc, type: 3}
   - {fileID: -840649160, guid: 226045b2676a37f438b64c46a362e5dc, type: 3}
-  health: 500
+  health: 200
   damage: 50
 --- !u!212 &5229118346707467323
 SpriteRenderer:

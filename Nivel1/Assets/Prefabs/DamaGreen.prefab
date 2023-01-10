@@ -51,8 +51,8 @@ MonoBehaviour:
   upgradePoint: {fileID: 5879772976404530705, guid: b79f12f8d2a854749bb1aaa7dae158d8,
     type: 3}
   color: 2
-  health: 500
-  damage: 100
+  health: 150
+  damage: 50
 --- !u!54 &658906066217398034
 Rigidbody:
   m_ObjectHideFlags: 0
