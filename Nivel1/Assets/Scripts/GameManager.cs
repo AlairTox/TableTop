@@ -1,11 +1,8 @@
 
-using System.ComponentModel;
 using System.Timers;
 using System.Threading;
-using System.Net.Mime;
 using System;
 using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
 
@@ -27,6 +24,9 @@ public class GameManager : MonoBehaviour
     [SerializeField] AudioClip gameMusic;
     [SerializeField] [Range(0, 1)] float gameMusicVolume;
 
+    [Header("Pause")]
+    [SerializeField] private GameObject menuPausa;
+
     Transform position;
     Boolean gameIsPaused;
     GameObject player, oldPlayer;
@@ -37,7 +37,7 @@ public class GameManager : MonoBehaviour
     Vector3 rotationVector = new Vector3(0, -90, -45);
     Vector3 rotationVectorFinish = new Vector3(45, 0, 0);
     Quaternion rotationInit;
-    float fov = 50.0f;
+    float fov = 39.0f;
     // Start is called before the first frame update
     void Start()
     {
@@ -118,12 +118,17 @@ public class GameManager : MonoBehaviour
             }
         }
     }
+
     void PauseGame (){
-        if(gameIsPaused)
+        if(gameIsPaused){
             Time.timeScale = 0f;
-        else 
+            menuPausa.SetActive(true);
+        }else{
             Time.timeScale = gameSpeed;
+            menuPausa.SetActive(false);
+        } 
     }
+
     void changeColor(){
         if(color == 0)
             color = 1;
@@ -137,6 +142,7 @@ public class GameManager : MonoBehaviour
             StartCoroutine(changeFOV());
         }
     }
+
 
     // IEnumerator changeRotation(){
     //     yield return new WaitForSeconds(0.2f);
