@@ -42,9 +42,10 @@ public class GameManager : MonoBehaviour
     void Start()
     {
         StartCoroutine(changeFOV());
-
+        Vector3 positionUpgrade = new Vector3(0, upgradeText.transform.position.y, upgradeText.transform.position.z);
         rotationInit = Quaternion.Euler(rotationVector);
         upgradeText.fontSize = scoreText.fontSize = lifesText.fontSize = 48;
+        upgradeText.transform.position = positionUpgrade;
         //Al inicio del juego se crea un peón
         player = Instantiate(prefabsPlayer[0], prefabsPlayer[0].transform.position, prefabsPlayer[0].transform.rotation);
         Time.timeScale  = gameSpeed;
@@ -59,7 +60,7 @@ public class GameManager : MonoBehaviour
             PauseGame();
         }
         scoreText.text = "\t" + currentScore.ToString();
-        upgradeText.text = upgradePoints.ToString();
+        upgradeText.text = upgradePoints.ToString() + "\t";
         lifesText.text = "\tHP: " + lifes.ToString();
         
         if(Input.GetKeyDown(KeyCode.Space))

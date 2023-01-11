@@ -32,7 +32,7 @@ public class Damas : MonoBehaviour
     void Update()
     {
         Move();
-        if((transform.position.z > 30 || transform.position.z < -20) || (transform.position.x < -30 || transform.position.z > 30))
+        if((transform.position.x > 30 || transform.position.z < -20) || (transform.position.x < -30 || transform.position.z > 30))
             Destroy(gameObject);
         
     }
