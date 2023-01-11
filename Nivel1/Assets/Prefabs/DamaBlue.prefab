@@ -53,6 +53,8 @@ MonoBehaviour:
   color: 3
   health: 150
   damage: 50
+  deathAudio: {fileID: 8300000, guid: 8f6d494615e127f4fa3ef2f74c73a9f4, type: 3}
+  deathAudioVolume: 0.1
 --- !u!54 &658906066217398034
 Rigidbody:
   m_ObjectHideFlags: 0

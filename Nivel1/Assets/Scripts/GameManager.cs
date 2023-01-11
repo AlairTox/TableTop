@@ -5,7 +5,7 @@ using System;
 using System.Collections;
 using UnityEngine;
 using UnityEngine.UI;
-
+using UnityEngine.SceneManagement;
 
 public class GameManager : MonoBehaviour
 {
@@ -22,7 +22,9 @@ public class GameManager : MonoBehaviour
 
     [Header("Music")]
     [SerializeField] AudioClip gameMusic;
+    [SerializeField] AudioClip startMusic;
     [SerializeField] [Range(0, 1)] float gameMusicVolume;
+    [SerializeField] [Range(0, 1)] float startMusicVolume;
 
     [Header("Pause")]
     [SerializeField] private GameObject menuPausa;
@@ -49,7 +51,8 @@ public class GameManager : MonoBehaviour
         //Al inicio del juego se crea un peón
         player = Instantiate(prefabsPlayer[0], prefabsPlayer[0].transform.position, prefabsPlayer[0].transform.rotation);
         Time.timeScale  = gameSpeed;
-        //AudioSource.PlayClipAtPoint(gameMusic, Camera.main.transform.position, gameMusicVolume);
+        AudioSource.PlayClipAtPoint(startMusic, Camera.main.transform.position, startMusicVolume);
+        StartCoroutine(playMusic());
     }
 
     // Update is called once per frame
@@ -94,6 +97,7 @@ public class GameManager : MonoBehaviour
         if(lifes == 0){
             //Game Over
             Time.timeScale = 0f;
+            SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex - 1);
             Destroy(player);
         }
     }
@@ -104,19 +108,51 @@ public class GameManager : MonoBehaviour
         //Se verifica si no ha llegado al último nivel de upgrade
         if(upgradeLevel < 4){
                 //Si se obtuvieron 10 puntos de upgrade se obtiene el cambio de prefab
-            if(upgradePoints == 2){
-                //Se resetean los puntos para poder hacer el siguiente upgrade
-                upgradePoints = 0;
-                //Se obtiene el indice del nuevo prefab
-                upgradeLevel++; 
-                //Se obtiene la última posición del jugador para que el nuevo prefab sea colocado en ese sitio
-                position = player.transform;
-                //Se destruye el prefab anterior
-                Destroy(player);
-                //Se crea el nuevo prefab con el upgrade realizado
-                player = Instantiate(prefabsPlayer[upgradeLevel], position.position, prefabsPlayer[upgradeLevel].transform.rotation);
-                //StartCoroutine(changeRotation());
+            switch(upgradeLevel){
+                case 0:
+                    if(upgradePoints == 3){
+                        //Se resetean los puntos para poder hacer el siguiente upgrade
+                        upgradePoints = 0;
+                        //Se obtiene el indice del nuevo prefab
+                        upgradeLevel++; 
+                        //Se obtiene la última posición del jugador para que el nuevo prefab sea colocado en ese sitio
+                        position = player.transform;
+                        //Se destruye el prefab anterior
+                        Destroy(player);
+                        //Se crea el nuevo prefab con el upgrade realizado
+                        player = Instantiate(prefabsPlayer[upgradeLevel], position.position, prefabsPlayer[upgradeLevel].transform.rotation);
+                        //StartCoroutine(changeRotation());
+                    }
+                break;
+                case 1:
+                    if(upgradePoints == 3){
+                        upgradePoints = 0;
+                        upgradeLevel++; 
+                        position = player.transform;
+                        Destroy(player);
+                        player = Instantiate(prefabsPlayer[upgradeLevel], position.position, prefabsPlayer[upgradeLevel].transform.rotation);
+                    }
+                break;
+                case 2:
+                    if(upgradePoints == 5){
+                        upgradePoints = 0;
+                        upgradeLevel++; 
+                        position = player.transform;
+                        Destroy(player);
+                        player = Instantiate(prefabsPlayer[upgradeLevel], position.position, prefabsPlayer[upgradeLevel].transform.rotation);
+                    }
+                break;
+                case 3:
+                    if(upgradePoints == 9){
+                        upgradePoints = 0;
+                        upgradeLevel++; 
+                        position = player.transform;
+                        Destroy(player);
+                        player = Instantiate(prefabsPlayer[upgradeLevel], position.position, prefabsPlayer[upgradeLevel].transform.rotation);
+                    }
+                break;
             }
+            
         }
     }
 
@@ -142,6 +178,12 @@ public class GameManager : MonoBehaviour
             Camera.main.fieldOfView--;
             StartCoroutine(changeFOV());
         }
+    }
+    IEnumerator playMusic(){
+        yield return new WaitForSeconds(7f);
+        AudioSource.PlayClipAtPoint(gameMusic, Camera.main.transform.position, gameMusicVolume);    
+        yield return new WaitForSeconds(221f);
+        StartCoroutine(playMusic());
     }
 
 

@@ -1155,7 +1155,7 @@ RectTransform:
   m_GameObject: {fileID: 985955190}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 0.2, y: 0.3, z: 0.3}
+  m_LocalScale: {x: 0.4, y: 0.5, z: 0.5}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 2024267448}
@@ -1163,7 +1163,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 875, y: -520}
+  m_AnchoredPosition: {x: 870, y: -510}
   m_SizeDelta: {x: 100, y: 100}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &985955192
@@ -1268,7 +1268,9 @@ MonoBehaviour:
   lifesText: {fileID: 1426933171}
   color: 1
   gameMusic: {fileID: 8300000, guid: ab69a987e3def6042b239cc6dd79a1bb, type: 3}
-  gameMusicVolume: 1
+  startMusic: {fileID: 8300000, guid: 281f403f05cacf8468a2e5c81bc7b1ab, type: 3}
+  gameMusicVolume: 0.2
+  startMusicVolume: 0.2
   menuPausa: {fileID: 1886785641}
   upgradePoints: 0
   currentScore: 0
@@ -1294,7 +1296,7 @@ AudioSource:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1053487449}
-  m_Enabled: 1
+  m_Enabled: 0
   serializedVersion: 4
   OutputAudioMixerGroup: {fileID: 0}
   m_audioClip: {fileID: 8300000, guid: ab69a987e3def6042b239cc6dd79a1bb, type: 3}
@@ -2129,7 +2131,7 @@ MonoBehaviour:
   - {fileID: 658906066217398035, guid: 7dce31d5f4b7b984ea6482d35740232b, type: 3}
   - {fileID: 658906066217398035, guid: 034deabe39ddc214d8cedb9a8625ad40, type: 3}
   - {fileID: 2225953639561532929, guid: bcb66b68e8a942f4ba995b055262778c, type: 3}
-  delayTime: 1.5
+  delayTime: 2
 --- !u!4 &1929846891
 Transform:
   m_ObjectHideFlags: 0

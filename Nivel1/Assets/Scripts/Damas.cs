@@ -13,6 +13,10 @@ public class Damas : MonoBehaviour
     [SerializeField] int health;
     [SerializeField] int damage;
 
+    [Header("Audio")]
+    [SerializeField] AudioClip deathAudio;
+    [SerializeField] [Range(0, 1)] float deathAudioVolume;
+
     int random;
     Rigidbody rigidBody;
     SpriteRenderer spriteRenderer;
@@ -52,6 +56,7 @@ public class Damas : MonoBehaviour
                 Instantiate(upgradePoint, transform.position, upgradePoint.transform.rotation);
             //Se destruye al enemigo(ya no tiene vida)
             FindObjectOfType<GameManager>().addToScore(100);
+            AudioSource.PlayClipAtPoint(deathAudio, Camera.main.transform.position, deathAudioVolume);    
             Destroy(gameObject);
         }
 
