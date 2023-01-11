@@ -31,11 +31,10 @@ public class MenuPausa : MonoBehaviour
 
     public void MenuSalir(){
         Time.timeScale = 1f;
-        SceneManager.LoadScene(SceneManager.GetActiveScene().name);
+        SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex - 1);
     }
 
     public void Salir(){
-        Debug.Log("/me Se cierra");
         Application.Quit();
     }
 }
