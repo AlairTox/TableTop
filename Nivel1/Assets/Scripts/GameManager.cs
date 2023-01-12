@@ -17,7 +17,6 @@ public class GameManager : MonoBehaviour
     [SerializeField] public int lifes;
     [SerializeField] Text scoreText; 
     [SerializeField] Text upgradeText;
-    [SerializeField] Text lifesText;
     [SerializeField] public int color;
 
     [Header("Music")]
@@ -40,13 +39,18 @@ public class GameManager : MonoBehaviour
     Vector3 rotationVectorFinish = new Vector3(45, 0, 0);
     Quaternion rotationInit;
     float fov = 39.0f;
+    private string colorPrefsName = "color";
     // Start is called before the first frame update
+     void Awake()
+    {
+        LoadData();    
+    }
     void Start()
     {
         StartCoroutine(changeFOV());
         Vector3 positionUpgrade = new Vector3(0, upgradeText.transform.position.y, upgradeText.transform.position.z);
         rotationInit = Quaternion.Euler(rotationVector);
-        upgradeText.fontSize = scoreText.fontSize = lifesText.fontSize = 48;
+        upgradeText.fontSize = scoreText.fontSize = 48;
         upgradeText.transform.position = positionUpgrade;
         //Al inicio del juego se crea un peón
         player = Instantiate(prefabsPlayer[0], prefabsPlayer[0].transform.position, prefabsPlayer[0].transform.rotation);
@@ -64,10 +68,6 @@ public class GameManager : MonoBehaviour
         }
         scoreText.text = "\t" + currentScore.ToString();
         upgradeText.text = upgradePoints.ToString() + "\t";
-        lifesText.text = "\tHP: " + lifes.ToString();
-        
-        if(Input.GetKeyDown(KeyCode.Space))
-            changeColor();
         
     }
 
@@ -79,6 +79,7 @@ public class GameManager : MonoBehaviour
     }
 
     public void processDeath(){
+        FindObjectOfType<sistemaVidas>().changeLifes();
         //Se restablece a 0 los puntos de upgrade
         upgradePoints = 0;
         //Se resta en uno el nivel de upgrade
@@ -166,14 +167,8 @@ public class GameManager : MonoBehaviour
         } 
     }
 
-    void changeColor(){
-        if(color == 0)
-            color = 1;
-        else 
-            color = 0;
-    }
     IEnumerator changeFOV(){
-        yield return new WaitForSeconds(0.01f);
+        yield return new WaitForSeconds(0.03f);
         if(fov != Camera.main.fieldOfView){
             Camera.main.fieldOfView--;
             StartCoroutine(changeFOV());
@@ -186,6 +181,9 @@ public class GameManager : MonoBehaviour
         StartCoroutine(playMusic());
     }
 
+    private void LoadData(){
+        color = PlayerPrefs.GetInt(colorPrefsName, 0);
+    }
 
     // IEnumerator changeRotation(){
     //     yield return new WaitForSeconds(0.2f);
