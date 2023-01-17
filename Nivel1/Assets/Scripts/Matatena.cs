@@ -14,19 +14,22 @@ public class Matatena : MonoBehaviour
     [SerializeField] GameObject shadow;
 
     int random;
+    int chooseSprite;
     GameObject shadowObj;
     Rigidbody rigidBody;
     SpriteRenderer sprite;
+    Animator animator;
 
     void Start()
     {
         sprite = gameObject.GetComponent<SpriteRenderer>();
-        random = Random.Range(0,6);
-        sprite.sprite = actualSprite[random];
+        chooseSprite = Random.Range(0,6);
+        sprite.sprite = actualSprite[chooseSprite];
 
         rigidBody = gameObject.GetComponent<Rigidbody>();
         Vector3 shadowPosition = new Vector3(transform.position.x, 0, transform.position.z);
         shadowObj = Instantiate(shadow, shadowPosition, shadow.transform.rotation);
+        animator = gameObject.GetComponent<Animator>();
     }
     // Update is called once per frame
     void Update()
@@ -49,13 +52,40 @@ public class Matatena : MonoBehaviour
             //Si el número obtenido es 1 se crea un objeto de tipo upgreadePoint
             Instantiate(upgradePoint, transform.position, upgradePoint.transform.rotation);
         FindObjectOfType<GameManager>().addToScore(100);
-        //Se destruye al enemigo
-        Destroy(shadowObj);
-        Destroy(gameObject);
+        StartCoroutine(deathMatatena());
         }
 
     void OnCollisionEnter(Collision collision){
         if((collision.gameObject.layer == 8) || (collision.gameObject.layer == 6))
             processHit();
+    }
+
+    IEnumerator deathMatatena(){        
+        animator.enabled = true;
+        switch(chooseSprite){
+            case 0:
+                animator.Play("Base Layer.Explosion_0", 0, 0.75f);
+            break;
+            case 1:
+                animator.Play("Base Layer.Explosion_1", 0, 0.75f);
+            break;
+            case 2:
+                animator.Play("Base Layer.Explosion_2", 0, 0.75f);
+            break;
+            case 3:
+                animator.Play("Base Layer.Explosion_3", 0, 0.75f);
+            break;
+            case 4:
+                animator.Play("Base Layer.Explosion_4", 0, 0.75f);
+            break;
+            case 5:
+                animator.Play("Base Layer.Explosion_5", 0, 0.75f);
+            break;
+        }
+        yield return new WaitForSeconds(0.15f);
+
+        //Se destruye al enemigo
+        Destroy(shadowObj);
+        Destroy(gameObject);
     }
 }

@@ -82,8 +82,10 @@ MonoBehaviour:
   actualSprite:
   - {fileID: 1768740279, guid: 226045b2676a37f438b64c46a362e5dc, type: 3}
   - {fileID: -840649160, guid: 226045b2676a37f438b64c46a362e5dc, type: 3}
-  health: 500
+  health: 200
   damage: 50
+  deathAudio: {fileID: 8300000, guid: 8f6d494615e127f4fa3ef2f74c73a9f4, type: 3}
+  deathAudioVolume: 0.1
 --- !u!212 &5229118346707467323
 SpriteRenderer:
   m_ObjectHideFlags: 0

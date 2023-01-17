@@ -1,14 +1,11 @@
 
-using System.ComponentModel;
 using System.Timers;
 using System.Threading;
-using System.Net.Mime;
 using System;
 using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
-
+using UnityEngine.SceneManagement;
 
 public class GameManager : MonoBehaviour
 {
@@ -20,12 +17,16 @@ public class GameManager : MonoBehaviour
     [SerializeField] public int lifes;
     [SerializeField] Text scoreText; 
     [SerializeField] Text upgradeText;
-    [SerializeField] Text lifesText;
     [SerializeField] public int color;
 
     [Header("Music")]
     [SerializeField] AudioClip gameMusic;
+    [SerializeField] AudioClip startMusic;
     [SerializeField] [Range(0, 1)] float gameMusicVolume;
+    [SerializeField] [Range(0, 1)] float startMusicVolume;
+
+    [Header("Pause")]
+    [SerializeField] private GameObject menuPausa;
 
     Transform position;
     Boolean gameIsPaused;
@@ -37,18 +38,25 @@ public class GameManager : MonoBehaviour
     Vector3 rotationVector = new Vector3(0, -90, -45);
     Vector3 rotationVectorFinish = new Vector3(45, 0, 0);
     Quaternion rotationInit;
-    float fov = 50.0f;
+    float fov = 39.0f;
+    private string colorPrefsName = "color";
     // Start is called before the first frame update
+     void Awake()
+    {
+        LoadData();    
+    }
     void Start()
     {
         StartCoroutine(changeFOV());
-
+        Vector3 positionUpgrade = new Vector3(0, upgradeText.transform.position.y, upgradeText.transform.position.z);
         rotationInit = Quaternion.Euler(rotationVector);
-        upgradeText.fontSize = scoreText.fontSize = lifesText.fontSize = 48;
+        upgradeText.fontSize = scoreText.fontSize = 48;
+        upgradeText.transform.position = positionUpgrade;
         //Al inicio del juego se crea un peón
         player = Instantiate(prefabsPlayer[0], prefabsPlayer[0].transform.position, prefabsPlayer[0].transform.rotation);
         Time.timeScale  = gameSpeed;
-        //AudioSource.PlayClipAtPoint(gameMusic, Camera.main.transform.position, gameMusicVolume);
+        AudioSource.PlayClipAtPoint(startMusic, Camera.main.transform.position, startMusicVolume);
+        StartCoroutine(playMusic());
     }
 
     // Update is called once per frame
@@ -59,11 +67,7 @@ public class GameManager : MonoBehaviour
             PauseGame();
         }
         scoreText.text = "\t" + currentScore.ToString();
-        upgradeText.text = upgradePoints.ToString();
-        lifesText.text = "\tHP: " + lifes.ToString();
-        
-        if(Input.GetKeyDown(KeyCode.Space))
-            changeColor();
+        upgradeText.text = upgradePoints.ToString() + "\t";
         
     }
 
@@ -75,6 +79,7 @@ public class GameManager : MonoBehaviour
     }
 
     public void processDeath(){
+        FindObjectOfType<sistemaVidas>().changeLifes();
         //Se restablece a 0 los puntos de upgrade
         upgradePoints = 0;
         //Se resta en uno el nivel de upgrade
@@ -93,6 +98,7 @@ public class GameManager : MonoBehaviour
         if(lifes == 0){
             //Game Over
             Time.timeScale = 0f;
+            SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex - 1);
             Destroy(player);
         }
     }
@@ -103,39 +109,80 @@ public class GameManager : MonoBehaviour
         //Se verifica si no ha llegado al último nivel de upgrade
         if(upgradeLevel < 4){
                 //Si se obtuvieron 10 puntos de upgrade se obtiene el cambio de prefab
-            if(upgradePoints == 2){
-                //Se resetean los puntos para poder hacer el siguiente upgrade
-                upgradePoints = 0;
-                //Se obtiene el indice del nuevo prefab
-                upgradeLevel++; 
-                //Se obtiene la última posición del jugador para que el nuevo prefab sea colocado en ese sitio
-                position = player.transform;
-                //Se destruye el prefab anterior
-                Destroy(player);
-                //Se crea el nuevo prefab con el upgrade realizado
-                player = Instantiate(prefabsPlayer[upgradeLevel], position.position, prefabsPlayer[upgradeLevel].transform.rotation);
-                //StartCoroutine(changeRotation());
+            switch(upgradeLevel){
+                case 0:
+                    if(upgradePoints == 3){
+                        //Se resetean los puntos para poder hacer el siguiente upgrade
+                        upgradePoints = 0;
+                        //Se obtiene el indice del nuevo prefab
+                        upgradeLevel++; 
+                        //Se obtiene la última posición del jugador para que el nuevo prefab sea colocado en ese sitio
+                        position = player.transform;
+                        //Se destruye el prefab anterior
+                        Destroy(player);
+                        //Se crea el nuevo prefab con el upgrade realizado
+                        player = Instantiate(prefabsPlayer[upgradeLevel], position.position, prefabsPlayer[upgradeLevel].transform.rotation);
+                        //StartCoroutine(changeRotation());
+                    }
+                break;
+                case 1:
+                    if(upgradePoints == 3){
+                        upgradePoints = 0;
+                        upgradeLevel++; 
+                        position = player.transform;
+                        Destroy(player);
+                        player = Instantiate(prefabsPlayer[upgradeLevel], position.position, prefabsPlayer[upgradeLevel].transform.rotation);
+                    }
+                break;
+                case 2:
+                    if(upgradePoints == 5){
+                        upgradePoints = 0;
+                        upgradeLevel++; 
+                        position = player.transform;
+                        Destroy(player);
+                        player = Instantiate(prefabsPlayer[upgradeLevel], position.position, prefabsPlayer[upgradeLevel].transform.rotation);
+                    }
+                break;
+                case 3:
+                    if(upgradePoints == 9){
+                        upgradePoints = 0;
+                        upgradeLevel++; 
+                        position = player.transform;
+                        Destroy(player);
+                        player = Instantiate(prefabsPlayer[upgradeLevel], position.position, prefabsPlayer[upgradeLevel].transform.rotation);
+                    }
+                break;
             }
+            
         }
     }
+
     void PauseGame (){
-        if(gameIsPaused)
+        if(gameIsPaused){
             Time.timeScale = 0f;
-        else 
+            menuPausa.SetActive(true);
+        }else{
             Time.timeScale = gameSpeed;
+            menuPausa.SetActive(false);
+        } 
     }
-    void changeColor(){
-        if(color == 0)
-            color = 1;
-        else 
-            color = 0;
-    }
+
     IEnumerator changeFOV(){
-        yield return new WaitForSeconds(0.01f);
+        yield return new WaitForSeconds(0.03f);
         if(fov != Camera.main.fieldOfView){
             Camera.main.fieldOfView--;
             StartCoroutine(changeFOV());
         }
+    }
+    IEnumerator playMusic(){
+        yield return new WaitForSeconds(7f);
+        AudioSource.PlayClipAtPoint(gameMusic, Camera.main.transform.position, gameMusicVolume);    
+        yield return new WaitForSeconds(221f);
+        StartCoroutine(playMusic());
+    }
+
+    private void LoadData(){
+        color = PlayerPrefs.GetInt(colorPrefsName, 0);
     }
 
     // IEnumerator changeRotation(){

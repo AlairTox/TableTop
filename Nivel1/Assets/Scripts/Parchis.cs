@@ -14,7 +14,11 @@ public class Parchis : MonoBehaviour
     [Header("Health")]
     [SerializeField] int health;
     [SerializeField] int damage;
-    
+
+    [Header("Audio")]
+    [SerializeField] AudioClip deathAudio;
+    [SerializeField] [Range(0, 1)] float deathAudioVolume;
+
     SpriteRenderer sprite;
     int random;
     Player player;
@@ -71,6 +75,7 @@ public class Parchis : MonoBehaviour
                 //Si el número obtenido es 1 se crea un objeto de tipo upgreadePoint
                 Instantiate(upgradePoint, transform.position, upgradePoint.transform.rotation);
             FindObjectOfType<GameManager>().addToScore(100);
+            AudioSource.PlayClipAtPoint(deathAudio, Camera.main.transform.position, deathAudioVolume);    
             //Se destruye al enemigo
             Destroy(gameObject);
         }
