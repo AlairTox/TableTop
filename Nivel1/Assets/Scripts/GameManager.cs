@@ -22,8 +22,10 @@ public class GameManager : MonoBehaviour
     [Header("Music")]
     [SerializeField] AudioClip gameMusic;
     [SerializeField] AudioClip startMusic;
+    [SerializeField] AudioClip gameOverMusic;
     [SerializeField] [Range(0, 1)] float gameMusicVolume;
     [SerializeField] [Range(0, 1)] float startMusicVolume;
+    [SerializeField] [Range(0, 1)] float gameOverMusicVolume;
 
     [Header("Pause")]
     [SerializeField] private GameObject menuPausa;
@@ -34,6 +36,7 @@ public class GameManager : MonoBehaviour
     int upgradeLevel = 0;
     public int upgradePoints = 0;
     public int currentScore;
+    private AudioSource audioSource;
 
     Vector3 rotationVector = new Vector3(0, -90, -45);
     Vector3 rotationVectorFinish = new Vector3(45, 0, 0);
@@ -96,10 +99,8 @@ public class GameManager : MonoBehaviour
         //Se resta una vida al jugador
         lifes--;
         if(lifes == 0){
-            //Game Over
-            Time.timeScale = 0f;
-            SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex - 1);
-            Destroy(player);
+            audioSource.Pause();
+            StartCoroutine(gameOver());
         }
     }
 
@@ -176,7 +177,8 @@ public class GameManager : MonoBehaviour
     }
     IEnumerator playMusic(){
         yield return new WaitForSeconds(7f);
-        AudioSource.PlayClipAtPoint(gameMusic, Camera.main.transform.position, gameMusicVolume);    
+        AudioSource.PlayClipAtPoint(gameMusic, Camera.main.transform.position, gameMusicVolume); 
+        audioSource = GetComponent<AudioSource>();   
         yield return new WaitForSeconds(221f);
         StartCoroutine(playMusic());
     }
@@ -185,6 +187,12 @@ public class GameManager : MonoBehaviour
         color = PlayerPrefs.GetInt(colorPrefsName, 0);
     }
 
+    IEnumerator gameOver(){
+        Destroy(player);
+        AudioSource.PlayClipAtPoint(gameOverMusic, Camera.main.transform.position, gameOverMusicVolume);
+        yield return new WaitForSeconds(4f);
+        SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex - 1);
+    }
     // IEnumerator changeRotation(){
     //     yield return new WaitForSeconds(0.2f);
     //     Quaternion finishRotation = Quaternion.Euler(rotationVectorFinish);

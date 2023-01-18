@@ -6,6 +6,7 @@ TagManager:
   tags:
   - Enemy
   - Points
+  - Wall
   layers:
   - Default
   - TransparentFX
@@ -18,7 +19,7 @@ TagManager:
   - Player Projectile
   - Enemy Projectile
   - Poins
-  - 
+  - Wall
   - 
   - 
   - 
@@ -57,4 +58,7 @@ TagManager:
     locked: 0
   - name: Points
     uniqueID: 117131909
+    locked: 0
+  - name: Wall
+    uniqueID: 1817038699
     locked: 0

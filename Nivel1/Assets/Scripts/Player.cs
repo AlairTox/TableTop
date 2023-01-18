@@ -160,6 +160,10 @@ public class Player : MonoBehaviour
     }
 
     void OnCollisionEnter(Collision collision){
+        // if(collision.gameObject.layer == 11 || collision.gameObject.tag == "Wall"){
+        //     rigidBody.velocity = new Vector3(0,0,0);
+        //     Debug.Log("Colision");
+        // }
         //Si existe una colisión y el jugador ya no es invensible
         if(!isInvinsible){
             //Si la colisión ocurre con un enemigo(layer 7)
