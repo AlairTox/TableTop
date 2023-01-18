@@ -29,6 +29,7 @@ public class GameManager : MonoBehaviour
 
     [Header("Pause")]
     [SerializeField] private GameObject menuPausa;
+    [SerializeField] private GameObject gameOverUI;
 
     Transform position;
     Boolean gameIsPaused;
@@ -50,6 +51,7 @@ public class GameManager : MonoBehaviour
     }
     void Start()
     {
+        audioSource = GetComponent<AudioSource>();   
         StartCoroutine(changeFOV());
         Vector3 positionUpgrade = new Vector3(0, upgradeText.transform.position.y, upgradeText.transform.position.z);
         rotationInit = Quaternion.Euler(rotationVector);
@@ -58,7 +60,8 @@ public class GameManager : MonoBehaviour
         //Al inicio del juego se crea un peón
         player = Instantiate(prefabsPlayer[0], prefabsPlayer[0].transform.position, prefabsPlayer[0].transform.rotation);
         Time.timeScale  = gameSpeed;
-        AudioSource.PlayClipAtPoint(startMusic, Camera.main.transform.position, startMusicVolume);
+        audioSource.clip = startMusic;
+        audioSource.Play();
         StartCoroutine(playMusic());
     }
 
@@ -80,6 +83,9 @@ public class GameManager : MonoBehaviour
     public int getColor(){
         return color;
     }
+    public int getLifes(){
+        return lifes;
+    }
 
     public void processDeath(){
         FindObjectOfType<sistemaVidas>().changeLifes();
@@ -99,7 +105,8 @@ public class GameManager : MonoBehaviour
         //Se resta una vida al jugador
         lifes--;
         if(lifes == 0){
-            audioSource.Pause();
+            audioSource.Stop();
+            gameOverUI.SetActive(true);
             StartCoroutine(gameOver());
         }
     }
@@ -177,10 +184,8 @@ public class GameManager : MonoBehaviour
     }
     IEnumerator playMusic(){
         yield return new WaitForSeconds(7f);
-        AudioSource.PlayClipAtPoint(gameMusic, Camera.main.transform.position, gameMusicVolume); 
-        audioSource = GetComponent<AudioSource>();   
-        yield return new WaitForSeconds(221f);
-        StartCoroutine(playMusic());
+        audioSource.clip = gameMusic;
+        audioSource.Play();
     }
 
     private void LoadData(){
@@ -189,7 +194,8 @@ public class GameManager : MonoBehaviour
 
     IEnumerator gameOver(){
         Destroy(player);
-        AudioSource.PlayClipAtPoint(gameOverMusic, Camera.main.transform.position, gameOverMusicVolume);
+        audioSource.clip = gameOverMusic;
+        audioSource.Play();
         yield return new WaitForSeconds(4f);
         SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex - 1);
     }
@@ -200,3 +206,4 @@ public class GameManager : MonoBehaviour
 
     // }
 }
+
