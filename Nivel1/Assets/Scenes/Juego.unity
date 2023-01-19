@@ -1843,9 +1843,9 @@ MonoBehaviour:
   gameMusic: {fileID: 8300000, guid: ab69a987e3def6042b239cc6dd79a1bb, type: 3}
   startMusic: {fileID: 8300000, guid: 281f403f05cacf8468a2e5c81bc7b1ab, type: 3}
   gameOverMusic: {fileID: 8300000, guid: 216c39d98f065dc48aa7918bbb3acfc6, type: 3}
-  gameMusicVolume: 0.2
-  startMusicVolume: 0.2
-  gameOverMusicVolume: 0.203
+  gameMusicVolume: 0.0175
+  startMusicVolume: 0.0175
+  gameOverMusicVolume: 0.0175
   menuPausa: {fileID: 1886785641}
   gameOverUI: {fileID: 930733037}
   upgradePoints: 0

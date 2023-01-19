@@ -54,7 +54,7 @@ MonoBehaviour:
   health: 150
   damage: 50
   deathAudio: {fileID: 8300000, guid: e385f1c2ba51fa34480bf61f0cfcbf67, type: 3}
-  deathAudioVolume: 0.1
+  deathAudioVolume: 0.075
 --- !u!54 &658906066217398034
 Rigidbody:
   m_ObjectHideFlags: 0

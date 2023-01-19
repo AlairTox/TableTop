@@ -69,4 +69,12 @@ public class MenuInicial : MonoBehaviour
     public void openInsta(){
         Application.OpenURL("https://www.instagram.com/maessu_mes/");
     }
+
+    public void OpenGitHub(){
+        Application.OpenURL("https://github.com/AlairTox");
+    }
+
+    public void OpenReddit(){
+        Application.OpenURL("https://www.reddit.com/user/BorealCobra");
+    }
 }
