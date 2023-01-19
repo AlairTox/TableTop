@@ -1,3 +1,5 @@
+using System;
+using System.Net.Mime;
 
 using System.Collections;
 using System.Collections.Generic;
@@ -50,5 +52,21 @@ public class MenuInicial : MonoBehaviour
 
     private void LoadData(){
         color = PlayerPrefs.GetInt(colorPrefsName, 0);
+    }
+
+    public void OpenPlotonium(){
+        Application.OpenURL("https://noxne.itch.io/plotonium-explosive-smasher-dx-machine-slayer-oh-yes-edition");
+    }
+
+    public void openTwitter(){
+        Application.OpenURL("https://twitter.com/Geo_Montauk");
+    }
+
+    public void openTumblr(){
+        Application.OpenURL("https://maessu-mes.tumblr.com");
+    }
+
+    public void openInsta(){
+        Application.OpenURL("https://www.instagram.com/maessu_mes/");
     }
 }
