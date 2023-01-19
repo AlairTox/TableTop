@@ -112,11 +112,11 @@ Rigidbody:
   m_GameObject: {fileID: 8995841226383743867}
   serializedVersion: 2
   m_Mass: 1
-  m_Drag: 0
+  m_Drag: 2
   m_AngularDrag: 0.05
   m_UseGravity: 1
   m_IsKinematic: 0
-  m_Interpolate: 0
+  m_Interpolate: 1
   m_Constraints: 116
   m_CollisionDetection: 1
 --- !u!114 &-2650593049472513495
@@ -146,6 +146,8 @@ MonoBehaviour:
   - {fileID: -330714157, guid: 107c7260b9d1e6141acb5af00c95216c, type: 3}
   - {fileID: -409987564, guid: 107c7260b9d1e6141acb5af00c95216c, type: 3}
   - {fileID: -723919697, guid: 107c7260b9d1e6141acb5af00c95216c, type: 3}
+  force: 1000
+  maxVel: 2000
   fireRate: 0.25
   projectilePrefab: {fileID: 1132424580817164973, guid: 9c377a32234905f4c80d7585bd746f1a,
     type: 3}

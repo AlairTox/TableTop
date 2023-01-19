@@ -82,7 +82,8 @@ public class Parchis : MonoBehaviour
     }
     //Si se detecta una colisión de culaquier tipo
     void OnCollisionEnter(Collision collision){
-        processHit(damage);
+        if(collision.gameObject.layer != 11)
+            processHit(damage);
     }
 
 }

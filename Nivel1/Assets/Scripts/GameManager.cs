@@ -22,11 +22,14 @@ public class GameManager : MonoBehaviour
     [Header("Music")]
     [SerializeField] AudioClip gameMusic;
     [SerializeField] AudioClip startMusic;
+    [SerializeField] AudioClip gameOverMusic;
     [SerializeField] [Range(0, 1)] float gameMusicVolume;
     [SerializeField] [Range(0, 1)] float startMusicVolume;
+    [SerializeField] [Range(0, 1)] float gameOverMusicVolume;
 
     [Header("Pause")]
     [SerializeField] private GameObject menuPausa;
+    [SerializeField] private GameObject gameOverUI;
 
     Transform position;
     Boolean gameIsPaused;
@@ -34,6 +37,7 @@ public class GameManager : MonoBehaviour
     int upgradeLevel = 0;
     public int upgradePoints = 0;
     public int currentScore;
+    private AudioSource audioSource;
 
     Vector3 rotationVector = new Vector3(0, -90, -45);
     Vector3 rotationVectorFinish = new Vector3(45, 0, 0);
@@ -47,6 +51,7 @@ public class GameManager : MonoBehaviour
     }
     void Start()
     {
+        audioSource = GetComponent<AudioSource>();   
         StartCoroutine(changeFOV());
         Vector3 positionUpgrade = new Vector3(0, upgradeText.transform.position.y, upgradeText.transform.position.z);
         rotationInit = Quaternion.Euler(rotationVector);
@@ -55,7 +60,8 @@ public class GameManager : MonoBehaviour
         //Al inicio del juego se crea un peón
         player = Instantiate(prefabsPlayer[0], prefabsPlayer[0].transform.position, prefabsPlayer[0].transform.rotation);
         Time.timeScale  = gameSpeed;
-        AudioSource.PlayClipAtPoint(startMusic, Camera.main.transform.position, startMusicVolume);
+        audioSource.clip = startMusic;
+        audioSource.Play();
         StartCoroutine(playMusic());
     }
 
@@ -77,6 +83,9 @@ public class GameManager : MonoBehaviour
     public int getColor(){
         return color;
     }
+    public int getLifes(){
+        return lifes;
+    }
 
     public void processDeath(){
         FindObjectOfType<sistemaVidas>().changeLifes();
@@ -96,10 +105,9 @@ public class GameManager : MonoBehaviour
         //Se resta una vida al jugador
         lifes--;
         if(lifes == 0){
-            //Game Over
-            Time.timeScale = 0f;
-            SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex - 1);
-            Destroy(player);
+            audioSource.Stop();
+            gameOverUI.SetActive(true);
+            StartCoroutine(gameOver());
         }
     }
 
@@ -176,15 +184,21 @@ public class GameManager : MonoBehaviour
     }
     IEnumerator playMusic(){
         yield return new WaitForSeconds(7f);
-        AudioSource.PlayClipAtPoint(gameMusic, Camera.main.transform.position, gameMusicVolume);    
-        yield return new WaitForSeconds(221f);
-        StartCoroutine(playMusic());
+        audioSource.clip = gameMusic;
+        audioSource.Play();
     }
 
     private void LoadData(){
         color = PlayerPrefs.GetInt(colorPrefsName, 0);
     }
 
+    IEnumerator gameOver(){
+        Destroy(player);
+        audioSource.clip = gameOverMusic;
+        audioSource.Play();
+        yield return new WaitForSeconds(4f);
+        SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex - 1);
+    }
     // IEnumerator changeRotation(){
     //     yield return new WaitForSeconds(0.2f);
     //     Quaternion finishRotation = Quaternion.Euler(rotationVectorFinish);
@@ -192,3 +206,4 @@ public class GameManager : MonoBehaviour
 
     // }
 }
+

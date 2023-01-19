@@ -1,8 +1,8 @@
 
+using System.Threading;
 using System;
 using System.Drawing;
 using System.Data;
-using System.Runtime.CompilerServices;
 using System.ComponentModel;
 using System.Collections;
 using System.Collections.Generic;
@@ -12,9 +12,8 @@ public class Player : MonoBehaviour
 {
 
     [Header("Move")]
-    [SerializeField] float moveSpeed;
-    [SerializeField] float minX, minZ, maxX, maxZ, padding;
     [SerializeField] Sprite[] newSprite;
+    [SerializeField] float force, maxVel;
     
     [Header("Fire")]
     [SerializeField] float fireRate;
@@ -34,7 +33,6 @@ public class Player : MonoBehaviour
     Coroutine fireCoroutine;
     SpriteRenderer sprite;
     bool isInvinsible;
-    Quaternion rotation0 = Quaternion.Euler(45, 0, 0);
     // Start is called before the first frame update
     void Start()
     {
@@ -49,7 +47,7 @@ public class Player : MonoBehaviour
         //Se le otorga invensibilidad y se inicia la rutina para removerla 
         isInvinsible = true;
         StartCoroutine(RemoveInvincibility());
-        rigidBody.isKinematic = true;
+
     }
 
     // Update is called once per frame
@@ -63,15 +61,18 @@ public class Player : MonoBehaviour
 
     private void Move()
     {
-        //Se obtienen las teclas pulsadas por el jugador WASD para determinar hacia donde se movera
-        float deltaX = Input.GetAxis("Horizontal") * moveSpeed * Time.deltaTime * 5;
-        float deltaZ = -(Input.GetAxis("Vertical") * moveSpeed * Time.deltaTime * 5);
-        //Se calcula la nueva posición del jugador
-        float newPosX = Mathf.Clamp(transform.position.x + deltaX, minX + padding, maxX - padding);
-        float newPosZ = Mathf.Clamp(transform.position.z + deltaZ, minZ + padding, maxZ - padding);
-        //Se desplaza el gameObject del jugador a la nueva posición
-        rigidBody.MovePosition(new UnityEngine.Vector3(newPosX, transform.position.y, newPosZ));        
-
+        float deltaX = Input.GetAxis("Horizontal");
+        float deltaZ = - Input.GetAxis("Vertical");
+        Vector3 vector= new Vector3(deltaX, transform.position.y, deltaZ);
+        rigidBody.AddForce(vector * force * Time.deltaTime);
+        if(rigidBody.velocity.magnitude > maxVel){
+            rigidBody.velocity = Vector3.Normalize(rigidBody.velocity) * maxVel; 
+        }
+        if(deltaX == 0 && deltaZ == 0){
+            rigidBody.drag = 50f;
+        }else{
+            rigidBody.drag = 2f;
+        }
     }
 
     void Fire(){
