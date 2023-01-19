@@ -123,8 +123,6 @@ NavMeshSettings:
     debug:
       m_Flags: 0
   m_NavMeshData: {fileID: 0}
-<<<<<<< Updated upstream
-=======
 --- !u!1 &47016521
 GameObject:
   m_ObjectHideFlags: 0
@@ -261,7 +259,6 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 47016521}
   m_CullTransparentMesh: 1
->>>>>>> Stashed changes
 --- !u!1 &50604599
 GameObject:
   m_ObjectHideFlags: 0
@@ -1086,20 +1083,17 @@ GameObject:
   m_PrefabAsset: {fileID: 0}
   serializedVersion: 6
   m_Component:
-<<<<<<< Updated upstream
   - component: {fileID: 730501216}
   - component: {fileID: 730501215}
   - component: {fileID: 730501214}
   - component: {fileID: 730501213}
   m_Layer: 0
   m_Name: Floor
-=======
   - component: {fileID: 634769987}
   - component: {fileID: 634769989}
   - component: {fileID: 634769988}
   m_Layer: 5
   m_Name: TeclasPausa
->>>>>>> Stashed changes
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -1122,7 +1116,6 @@ RectTransform:
   m_Mesh: {fileID: 10209, guid: 0000000000000000e000000000000000, type: 0}
 --- !u!23 &730501214
 MeshRenderer:
-=======
   m_GameObject: {fileID: 634769986}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
@@ -1139,15 +1132,12 @@ MeshRenderer:
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &634769988
 MonoBehaviour:
->>>>>>> Stashed changes
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-<<<<<<< Updated upstream
   m_GameObject: {fileID: 730501212}
   m_Enabled: 1
-=======
   m_GameObject: {fileID: 634769986}
   m_Enabled: 1
   m_EditorHideFlags: 0
@@ -2278,7 +2268,6 @@ Light:
   m_CullingMask:
     serializedVersion: 2
     m_Bits: 4294967295
->>>>>>> Stashed changes
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
@@ -2419,7 +2408,6 @@ RectTransform:
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 0, y: 0, z: 0}
   m_ConstrainProportionsScale: 0
-<<<<<<< Updated upstream
   m_Children:
   - {fileID: 1869089515}
   m_Father: {fileID: 0}
@@ -2431,7 +2419,6 @@ RectTransform:
   m_SizeDelta: {x: 0, y: 0}
   m_Pivot: {x: 0, y: 0}
 --- !u!114 &731272536
-=======
   m_Children: []
   m_Father: {fileID: 670561923}
   m_RootOrder: 2
@@ -2442,7 +2429,6 @@ RectTransform:
   m_SizeDelta: {x: 1400, y: 60}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1541073393
->>>>>>> Stashed changes
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -2454,9 +2440,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: eacfd11df3a2da6429f43b592a781aee, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-<<<<<<< Updated upstream
 --- !u!1 &1218024512
-=======
   m_Material: {fileID: 0}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_RaycastTarget: 1
@@ -2622,7 +2606,6 @@ CanvasRenderer:
   m_GameObject: {fileID: 1615219274}
   m_CullTransparentMesh: 1
 --- !u!1 &1663028062
->>>>>>> Stashed changes
 GameObject:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -2756,9 +2739,7 @@ CanvasRenderer:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-<<<<<<< Updated upstream
   m_GameObject: {fileID: 1218024512}
-=======
   m_GameObject: {fileID: 1663028062}
   m_CullTransparentMesh: 1
 --- !u!1 &1697526029
@@ -2836,7 +2817,6 @@ CanvasRenderer:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1697526029}
->>>>>>> Stashed changes
   m_CullTransparentMesh: 1
 --- !u!4 &1371069657
 Transform:
@@ -2844,7 +2824,6 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-<<<<<<< Updated upstream
   m_GameObject: {fileID: 1371069655}
   m_LocalRotation: {x: 0.40821788, y: -0.23456968, z: 0.10938163, w: 0.8754261}
   m_LocalPosition: {x: 0, y: 3, z: 0}
@@ -2855,7 +2834,6 @@ Transform:
   m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 50, y: -30, z: 0}
 --- !u!114 &1371069658
-=======
   m_GameObject: {fileID: 1708754028}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: -105}
@@ -2941,7 +2919,6 @@ MonoBehaviour:
           m_BoolArgument: 1
         m_CallState: 2
 --- !u!114 &1708754031
->>>>>>> Stashed changes
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -2953,7 +2930,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 474bcb49853aa07438625e644c072ee6, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-<<<<<<< Updated upstream
   m_Version: 1
   m_UsePipelineSettings: 1
   m_AdditionalLightsShadowResolutionTier: 2
@@ -2962,7 +2938,6 @@ MonoBehaviour:
   m_ShadowLayerMask: 1
   m_LightCookieSize: {x: 1, y: 1}
   m_LightCookieOffset: {x: 0, y: 0}
-=======
   m_Material: {fileID: 0}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_RaycastTarget: 1
@@ -2989,7 +2964,6 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1708754028}
   m_CullTransparentMesh: 1
->>>>>>> Stashed changes
 --- !u!1 &1736537576
 GameObject:
   m_ObjectHideFlags: 0
@@ -3376,8 +3350,6 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 5
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-<<<<<<< Updated upstream
-=======
 --- !u!1 &1905751700
 GameObject:
   m_ObjectHideFlags: 0
@@ -3514,7 +3486,6 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1905751700}
   m_CullTransparentMesh: 1
->>>>>>> Stashed changes
 --- !u!1 &1914600374
 GameObject:
   m_ObjectHideFlags: 0
@@ -4140,8 +4111,6 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 2078998005}
   m_CullTransparentMesh: 1
-<<<<<<< Updated upstream
-=======
 --- !u!1 &2141753758
 GameObject:
   m_ObjectHideFlags: 0
@@ -4278,4 +4247,3 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 2141753758}
   m_CullTransparentMesh: 1
->>>>>>> Stashed changes
