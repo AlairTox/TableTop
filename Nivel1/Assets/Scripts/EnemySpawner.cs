@@ -40,7 +40,16 @@ public class EnemySpawner : MonoBehaviour
         //Tiempo de espera entre la aparición de Parchis
         yield return new WaitForSeconds(5f);
         //Obtención de una ubicación aleatoria dentro del campo de juego
-        UnityEngine.Vector3 position = new UnityEngine.Vector3(Random.Range(-12, 12), 2f, Random.Range(-11, 22));
+        UnityEngine.Vector3 position = new Vector3(-15f, 2f, Random.Range(-16,9));
+        CreateEnemy(enemyPrefabs[0], position);
+        yield return new WaitForSeconds(5f);
+        position = new Vector3(Random.Range(-15,13), 2f, 9f);
+        CreateEnemy(enemyPrefabs[0], position);
+        yield return new WaitForSeconds(5f);
+        position = new Vector3(13f, 2f, Random.Range(-16,9));
+        CreateEnemy(enemyPrefabs[0], position);
+        yield return new WaitForSeconds(5f);
+        position = new Vector3(Random.Range(-15,13), 2f, -16f);
         CreateEnemy(enemyPrefabs[0], position);
         //Creación de Parchis nuevamente
         StartCoroutine(SpawnParchis());
